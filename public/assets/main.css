@@ -135,6 +135,34 @@ section {
   margin-top: 5%;
 }
 
+.stat-card {
+  margin-top: 12px;
+  font-size: 12px;
+  width: 100%;
+  color: var(--coin-title);
+}
+
+.stat-card h6 {
+  text-align: center;
+  color: white;
+  font-size: 12px !important;
+  padding: 4px 0;
+  border-radius: 25px;
+  background: -webkit-gradient(linear, left top, right top, from(#3023AE), color-stop(35%, #3023AE), to(#9013FE));
+  background: linear-gradient(90deg, #3023AE 0%, #3023AE 35%, #9013FE 100%);
+}
+
+.percentage {
+  color: var(--main-color);
+  font-family: 'Oswald', sans-serif;
+  text-align: center;
+  font-size: 36px;
+}
+
+.card-text {
+  text-align: end;
+}
+
 body {
   color: white !important;
   font-family: "Red Hat Display", sans-serif;
