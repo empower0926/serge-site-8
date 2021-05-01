@@ -22,6 +22,7 @@ class Home extends React.Component {
     return (
       <div>
         <section class="top">
+          <div className="bg"></div>
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-8">
@@ -977,9 +978,9 @@ class Home extends React.Component {
       bubble.innerHTML = "$ " + val;
 
       const color =
-        "linear-gradient(90deg, #360066 0%, var(--main-color) " +
+        "linear-gradient(90deg, #2B468E 0%, #2B468E " +
         newVal +
-        "%, var(--main-light) " +
+        "%, #A250D0" +
         newVal +
         "%)";
       range.style.background = color;
