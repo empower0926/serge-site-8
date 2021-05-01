@@ -249,6 +249,7 @@ nav {
   .point {
     margin-top: 4rem;
     padding: 0 2rem;
+    text-align: justify !important;
     @include screen(small) {
       margin-top: 1.2rem;
     }
@@ -302,6 +303,8 @@ nav {
 }
 
 .stable-coin {
+  text-align: justify !important;
+
   h2 {
     text-align: left;
     @include screen(small) {

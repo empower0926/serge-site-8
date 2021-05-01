@@ -383,6 +383,7 @@ nav .sign-up {
 .why .point {
   margin-top: 4rem;
   padding: 0 2rem;
+  text-align: justify !important;
 }
 
 @media screen and (max-width: 576px) {
@@ -451,6 +452,10 @@ nav .sign-up {
   .features-desktop .feature .feature-desc {
     font-size: 12px;
   }
+}
+
+.stable-coin {
+  text-align: justify !important;
 }
 
 .stable-coin h2 {

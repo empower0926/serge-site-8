@@ -1417,14 +1417,14 @@ class AML extends React.Component {
                 <div className="text-center">
                   <img
                     className="footer-img"
-                    src="https://flashxchanger.com/assets/images/logo.svg"
+                    src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619891536/flashxchanger/logo_zbnr8l.svg"
                     alt=""
                   />
                 </div>
               </div>
 
               <div className="col-12 col-md-10">
-                <div className="row socials mt-5 mt-md-0 justify-content-end">
+                <div className="row socials mt-5 mt-md-0 justify-content-center">
                   <div className="col-3 col-md-1">
                     <a
                       target="_blank"
