@@ -22,6 +22,7 @@ class Home extends React.Component {
     return (
       <div>
         <section class="top">
+          <div className="bg"></div>
           <div class="container">
             <div class="row justify-content-center">
               <div class="col-md-8">

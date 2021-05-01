@@ -145,12 +145,15 @@ body {
 
 .top {
   text-align: center;
+  min-height: 70vh;
 }
 
 .top .intro {
   margin-top: 12rem;
   font-weight: bold;
   font-size: 60px;
+  -webkit-animation: 20s bgchange infinite;
+          animation: 20s bgchange infinite;
 }
 
 @media screen and (max-width: 576px) {
@@ -168,6 +171,76 @@ body {
 @media screen and (max-width: 576px) {
   .top .contact-us .contact-intro {
     font-size: 12px;
+  }
+}
+
+.top .bg {
+  position: absolute;
+  top: 0;
+  z-index: -99;
+  left: 0;
+  width: 100%;
+  height: 80vh;
+  background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-animation: 40s changebg 10s infinite;
+          animation: 40s changebg 10s infinite;
+}
+
+@-webkit-keyframes changebg {
+  0% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  25% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847906/flashxchanger/slide-2_bqwfx4.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-3_qoa8ew.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  75% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-4_ic4ene.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+}
+
+@keyframes changebg {
+  0% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  25% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847906/flashxchanger/slide-2_bqwfx4.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  50% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-3_qoa8ew.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  75% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-4_ic4ene.png) no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  100% {
+    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 
@@ -440,7 +513,7 @@ body {
 
 @media screen and (max-width: 576px) {
   .packages .package .price {
-    margin: .5rem 0;
+    margin: 0.5rem 0;
     text-align: left;
     font-size: 12px;
   }
