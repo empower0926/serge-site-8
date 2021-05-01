@@ -165,6 +165,20 @@ section {
   text-align: end;
 }
 
+::-webkit-scrollbar {
+  width: 0.25rem;
+  height: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #000231;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 25px;
+  background: #368d9f;
+}
+
 body {
   overflow-x: hidden !important;
   color: white !important;
@@ -258,7 +272,7 @@ nav .sign-up {
 }
 
 .top .intro {
-  margin-top: 12rem;
+  margin-top: 4rem;
   font-weight: bold;
   font-size: 60px;
 }
@@ -278,71 +292,6 @@ nav .sign-up {
 @media screen and (max-width: 576px) {
   .top .contact-us .contact-intro {
     font-size: 12px;
-  }
-}
-
-.top .bg {
-  position: absolute;
-  top: 0;
-  z-index: -99;
-  left: 0;
-  width: 100%;
-  height: 80vh;
-}
-
-@-webkit-keyframes changebg {
-  0% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  25% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847906/flashxchanger/slide-2_bqwfx4.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  50% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-3_qoa8ew.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  75% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-4_ic4ene.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  100% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-}
-
-@keyframes changebg {
-  0% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  25% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847906/flashxchanger/slide-2_bqwfx4.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  50% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-3_qoa8ew.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  75% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847904/flashxchanger/slide-4_ic4ene.png) no-repeat;
-    background-size: cover;
-    background-position: center;
-  }
-  100% {
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png) no-repeat;
-    background-size: cover;
-    background-position: center;
   }
 }
 
@@ -454,11 +403,10 @@ nav .sign-up {
 }
 
 .features-desktop .feature {
-  min-height: 450px;
   margin-top: 2rem;
   text-align: justify;
   text-align-last: center;
-  padding: 2rem;
+  padding: 5rem 2rem;
 }
 
 @media screen and (max-width: 576px) {
@@ -728,7 +676,7 @@ nav .sign-up {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border-radius: 15px;
-  margin: 1rem .5rem;
+  margin: 1rem 0.5rem;
 }
 
 @media screen and (max-width: 576px) {
@@ -751,7 +699,7 @@ nav .sign-up {
 }
 
 .footer ul li {
-  margin-top: .5rem;
+  margin-top: 0.5rem;
   list-style: none;
 }
 
@@ -774,6 +722,135 @@ nav .sign-up {
 
 .footer .socials img {
   width: 24px;
+}
+
+@-webkit-keyframes openChat {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+}
+
+@keyframes openChat {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+}
+
+@-webkit-keyframes closeChat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+}
+
+@keyframes closeChat {
+  from {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+  to {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    -webkit-transform-origin: right bottom;
+            transform-origin: right bottom;
+  }
+}
+
+#discord-widget {
+  display: none !important;
+}
+
+.discord {
+  width: 18rem;
+  margin: 1rem;
+  text-align: right;
+  z-index: 9999;
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-animation-name: discord;
+          animation-name: discord;
+  -webkit-animation-duration: 1s;
+          animation-duration: 1s;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.discord iframe {
+  -webkit-transform: scale(0);
+          transform: scale(0);
+}
+
+.discord img {
+  width: 9rem !important;
+}
+
+.discord img:hover {
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
+  cursor: pointer;
+}
+
+@-webkit-keyframes discord {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+}
+
+@keyframes discord {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+    display: none;
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+    display: block;
+  }
+}
+
+.discord img {
+  width: 100%;
 }
 
 @media (min-width: 1200px) {
