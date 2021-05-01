@@ -30,10 +30,10 @@
     -->
     <!-- JS -->
     <script
-    src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-    integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"
-  ></script>
+      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
+      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+      crossorigin="anonymous"
+    ></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
@@ -41,249 +41,301 @@
     ></script>
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-<script src="assets/lib/chart.js/Chart.min.js"></script>
+    <script src="assets/lib/chart.js/Chart.min.js"></script>
 
     <script>
       AOS.init();
-      
-$(document).ready(function(){
+      $(document).ready(function () {
+        $.ajax({
+          url: "https://maximsky.asnoo.com/c/s7315/www/livechart/getcur.php",
+          type: "get",
 
-$.ajax({
-	      url: 'https://maximsky.asnoo.com/c/s7315/www/livechart/getcur.php',
-     	      type: 'get',
+          success: function (data, status) {
+            console.log("ajax_getcur - ok");
+          },
+        });
+        $.ajax({
+          url:
+            "https://maximsky.asnoo.com/c/s7315/www/livechart/ajax_curdata.php",
+          type: "get",
 
-              success: function(data, status) {
-					console.log('ajax_getcur - ok');
-			}
-});
-	$.ajax({
-	      url: 'https://maximsky.asnoo.com/c/s7315/www/livechart/ajax_curdata.php',
-     	      type: 'get',
+          success: function (data, status) {
+            console.log("ajax_getcurdata - ok");
+            var curdata = JSON.parse(data);
 
-              success: function(data, status) {
-					console.log('ajax_getcurdata - ok');
-					var curdata=JSON.parse(data);
+            //chart 1
+            var ctx1 = document.getElementById("live_chart_1").getContext("2d");
 
+            var chart1 = new Chart(ctx1, {
+              type: "line",
 
+              // The data for our dataset
+              data: {
+                labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+                // Information about the dataset
+                datasets: [
+                  {
+                    //label: "Rainfall",
+                    backgroundColor: "#ecd9ff",
+                    borderColor: "#358A9E",
 
+                    data: [
+                      curdata[11][1],
+                      curdata[10][1],
+                      curdata[9][1],
+                      curdata[8][1],
+                      curdata[7][1],
+                      curdata[6][1],
+                      curdata[5][1],
+                      curdata[4][1],
+                      curdata[3][1],
+                      curdata[2][1],
+                      curdata[1][1],
+                      curdata[0][1],
+                    ],
 
+                    fill: false,
+                    tension: 0.4,
+                    pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+                    pointBorderColor: "rgba(0, 0, 0, 0.01)",
+                  },
+                ],
+              },
 
+              // Configuration options
+              options: {
+                layout: {
+                  padding: 10,
+                },
+                legend: {
+                  display: false,
+                  position: "bottom",
+                },
+                //title: {
+                //			display: true,
+                //		text: 'Precipitation in Toronto'
+                //},
+                scales: {
+                  yAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "",
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "day",
+                      },
+                    },
+                  ],
+                },
+              },
+            });
 
+            //chart 2
+            var ctx2 = document.getElementById("live_chart_2").getContext("2d");
+            var chart2 = new Chart(ctx2, {
+              // The type of chart we want to create
+              type: "line", // also try bar or other graph types
 
-//chart 1
-var ctx1 = document.getElementById('live_chart_1').getContext('2d');
+              // The data for our dataset
+              data: {
+                labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+                // Information about the dataset
+                datasets: [
+                  {
+                    //label: "Rainfall",
+                    backgroundColor: "#ecd9ff",
+                    borderColor: "#358A9E",
+                    fill: false,
+                    tension: 0.4,
+                    data: [
+                      curdata[11][3],
+                      curdata[10][3],
+                      curdata[9][3],
+                      curdata[8][3],
+                      curdata[7][3],
+                      curdata[6][3],
+                      curdata[5][3],
+                      curdata[4][3],
+                      curdata[3][3],
+                      curdata[2][3],
+                      curdata[1][3],
+                      curdata[0][3],
+                    ],
+                    pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+                    pointBorderColor: "rgba(0, 0, 0, 0.01)",
+                  },
+                ],
+              },
 
-var chart1 = new Chart(ctx1, 
-{
+              // Configuration options
+              options: {
+                layout: {
+                  padding: 10,
+                },
+                legend: {
+                  display: false,
+                  position: "bottom",
+                },
+                //title: {
+                //			display: true,
+                //		text: 'Precipitation in Toronto'
+                //},
+                scales: {
+                  yAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "",
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "day",
+                      },
+                    },
+                  ],
+                },
+              },
+            });
 
-	type: 'line', 
+            //chart 3
+            var ctx3 = document.getElementById("live_chart_3").getContext("2d");
+            var chart3 = new Chart(ctx3, {
+              // The type of chart we want to create
+              type: "line", // also try bar or other graph types
 
-	// The data for our dataset
-	data: {
-		labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
-		// Information about the dataset
-    datasets: [{
-			//label: "Rainfall",
-			backgroundColor: '#ecd9ff',
-			borderColor: '#358A9E',
-		
-     
-      data: [curdata[11][1],curdata[10][1],curdata[9][1], curdata[8][1], curdata[7][1], curdata[6][1], curdata[5][1], curdata[4][1], curdata[3][1], curdata[2][1], curdata[1][1], curdata[0][1]],
-  
-      fill: false,
-      tension: 0.4,
-      pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-      pointBorderColor:'rgba(0, 0, 0, 0.01)',
- 
-		}]
-	},
+              // The data for our dataset
+              data: {
+                labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+                // Information about the dataset
+                datasets: [
+                  {
+                    //label: "Rainfall",
+                    backgroundColor: "#ecd9ff",
+                    borderColor: "#358A9E",
+                    fill: false,
+                    tension: 0.4,
+                    data: [
+                      curdata[11][5],
+                      curdata[10][5],
+                      curdata[9][5],
+                      curdata[8][5],
+                      curdata[7][5],
+                      curdata[6][5],
+                      curdata[5][5],
+                      curdata[4][5],
+                      curdata[3][5],
+                      curdata[2][5],
+                      curdata[1][5],
+                      curdata[0][5],
+                    ],
+                    pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+                    pointBorderColor: "rgba(0, 0, 0, 0.01)",
+                  },
+                ],
+              },
 
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			display: false,
-			position: 'bottom',
-		},
-		//title: {
-//			display: true,
-	//		text: 'Precipitation in Toronto'
-		//},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: ''
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: 'day'
-				}
-			}]
-		}
-	}
-});
+              // Configuration options
+              options: {
+                layout: {
+                  padding: 10,
+                },
+                legend: {
+                  display: false,
+                  position: "bottom",
+                },
+                //title: {
+                //			display: true,
+                //		text: 'Precipitation in Toronto'
+                //},
+                scales: {
+                  yAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "",
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "hour",
+                      },
+                    },
+                  ],
+                },
+              },
+            });
 
+            var coin_price = [curdata[0][1], curdata[0][3], curdata[0][5]];
+            var coin_volume = ["00,000,000", curdata[0][4], curdata[0][6]];
+            var coin_volume_change = [
+              "+0.00",
+              parseFloat(
+                ((curdata[0][4] - curdata[1][4]) / curdata[1][4]) * 100
+              ).toFixed(2),
+              parseFloat(
+                ((curdata[0][6] - curdata[1][6]) / curdata[1][6]) * 100
+              ).toFixed(2),
+            ];
 
-//chart 2
-var ctx2 = document.getElementById('live_chart_2').getContext('2d');
-var chart2 = new Chart(ctx2,
- {
-	// The type of chart we want to create
-	type: 'line', // also try bar or other graph types
+            if (coin_volume_change[0] > 0)
+              coin_volume_change[0] = "+" + coin_volume_change[0];
+            if (coin_volume_change[1] > 0)
+              coin_volume_change[1] = "+" + coin_volume_change[1];
+            if (coin_volume_change[2] > 0)
+              coin_volume_change[2] = "+" + coin_volume_change[2];
 
-	// The data for our dataset
-	data: {
-		labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
-		// Information about the dataset
-    datasets: [{
-			//label: "Rainfall",
-			backgroundColor: '#ecd9ff',
-			borderColor: '#358A9E',
-			fill: false,
-      tension: 0.4,
-			data: [curdata[11][3],curdata[10][3],curdata[9][3], curdata[8][3], curdata[7][3], curdata[6][3], curdata[5][3], curdata[4][3], curdata[3][3], curdata[2][3], curdata[1][3], curdata[0][3]],
-			pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-      pointBorderColor:'rgba(0, 0, 0, 0.01)',
-		}]
-	},
+            coin_price[1] = coin_price[1].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
+            coin_price[2] = coin_price[2].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
+            coin_volume[1] = coin_volume[1].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
+            coin_volume[2] = coin_volume[2].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
 
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			display: false,
-			position: 'bottom',
-		},
-		//title: {
-//			display: true,
-	//		text: 'Precipitation in Toronto'
-		//},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: ''
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: 'day'
-				}
-			}]
-		}
-	}
-});
+            // // upd prices
 
+            // $('.col-xl-4 .price').each( function (key,value) {
+            // 	$(this).html('$ '+coin_price[key]);
+            // });
 
-//chart 3
-var ctx3 = document.getElementById('live_chart_3').getContext('2d');
-var chart3 = new Chart(ctx3, {
-	// The type of chart we want to create
-	type: 'line', // also try bar or other graph types
+            // // upd volume
+            // $('.coin-data .col-xl-8 span').each( function (key,value) {
+            // 	$(this).html('Volume: '+coin_volume[key]+' USDT');
+            // });
 
-	// The data for our dataset
-	data: {
-		labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
-		// Information about the dataset
-    datasets: [{
-			//label: "Rainfall",
-			backgroundColor: '#ecd9ff',
-			borderColor: '#358A9E',
-			fill: false,
-      tension: 0.4,
-			data: [curdata[11][5],curdata[10][5],curdata[9][5], curdata[8][5], curdata[7][5], curdata[6][5], curdata[5][5], curdata[4][5], curdata[3][5], curdata[2][5], curdata[1][5], curdata[0][5]],
-			pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-      pointBorderColor:'rgba(0, 0, 0, 0.01)',
-		}]
-	},
-
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			display: false,
-			position: 'bottom',
-		},
-		//title: {
-//			display: true,
-	//		text: 'Precipitation in Toronto'
-		//},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: ''
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: 'hour'
-				}
-			}]
-		}
-	}
-});
-
-
-var coin_price = [curdata[0][1], curdata[0][3], curdata[0][5]];
-var coin_volume = ['00,000,000', curdata[0][4], curdata[0][6]];
-var coin_volume_change = ['+0.00', parseFloat( (curdata[0][4]-curdata[1][4])/curdata[1][4]*100 ).toFixed(2), parseFloat( (curdata[0][6]-curdata[1][6])/curdata[1][6]*100 ).toFixed(2)];
-
-if (coin_volume_change[0]>0) coin_volume_change[0]='+'+coin_volume_change[0];
-if (coin_volume_change[1]>0) coin_volume_change[1]='+'+coin_volume_change[1];
-if (coin_volume_change[2]>0) coin_volume_change[2]='+'+coin_volume_change[2];
-
-
-coin_price[1]=coin_price[1].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-coin_price[2]=coin_price[2].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-coin_volume[1]=coin_volume[1].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-coin_volume[2]=coin_volume[2].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-
-
-
-
-// // upd prices
-
-// $('.col-xl-4 .price').each( function (key,value) {
-// 	$(this).html('$ '+coin_price[key]);
-// });
-
-
-// // upd volume
-// $('.coin-data .col-xl-8 span').each( function (key,value) {
-// 	$(this).html('Volume: '+coin_volume[key]+' USDT');
-// });
-
-// // upd volume change
-// $('.coin-data .col-xl-2 span').each( function (key,value) {
-// 	$(this).html(''+coin_volume_change[key]+'%');
-// });
-
-
-
-	      },
-	      error: function(xhr, desc, err) {
-              console.log(xhr);
-              console.log("Details: " + desc + "\nError:" + err);
-      	      }
-    	});
-
-
-
-});
-
-        </script>
-  
-</body>
+            // // upd volume change
+            // $('.coin-data .col-xl-2 span').each( function (key,value) {
+            // 	$(this).html(''+coin_volume_change[key]+'%');
+            // });
+          },
+          error: function (xhr, desc, err) {
+            console.log(xhr);
+            console.log("Details: " + desc + "\nError:" + err);
+          },
+        });
+      });
+    </script>
+  </body>
 </html>
