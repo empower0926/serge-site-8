@@ -570,7 +570,7 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0">
+                      <span class="d-block d-md-none select mt-2 mr-0" onClick={() => this.selectpack("Standard")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -618,7 +618,7 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0">
+                      <span class="d-block d-md-none select mt-2 mr-0"  onClick={() => this.selectpack("Premium")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -666,7 +666,7 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0">
+                      <span class="d-block d-md-none select mt-2 mr-0"  onClick={() => this.selectpack("Gold")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -714,7 +714,7 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3 ">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0">
+                      <span class="d-block d-md-none select mt-2 mr-0" onClick={() => this.selectpack("Elite")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
