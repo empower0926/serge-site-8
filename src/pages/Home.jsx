@@ -21,6 +21,39 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <div
+          class="modal fade"
+          id="exampleModal"
+          tabindex="-1"
+          aria-labelledby="exampleModalLabel"
+          aria-hidden="true">
+          <div class="modal-dialog">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+                  Modal title
+                </h5>
+                <button
+                  type="button"
+                  class="btn-close"
+                  data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div class="modal-body">...</div>
+              <div class="modal-footer">
+                <button
+                  type="button"
+                  class="btn btn-secondary"
+                  data-bs-dismiss="modal">
+                  Close
+                </button>
+                <button type="button" class="btn btn-primary">
+                  Save changes
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
         <div className="ui-back d-none d-md-block">
           <img
             src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619854345/flashxchanger/ui_back_fjbnj2.svg"
@@ -108,9 +141,12 @@ class Home extends React.Component {
                     data-aos="fade-up"
                     data-aos-duration="800"
                     data-aos-delay="1200">
-                    <a class="a-btn" target="_blank" href="/contact">
+                    <span
+                      class="a-btn"
+                      data-bs-toggle="modal"
+                      data-bs-target="#exampleModal">
                       Contact Us
-                    </a>
+                    </span>
                   </div>
                 </div>
               </div>
@@ -130,7 +166,7 @@ class Home extends React.Component {
                   <div class="coin-data">
                     <span class="coin-image">
                       <img
-                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619804531/flashxchanger/oztg-coin_v3eppt.svg"
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619874803/flashxchanger/OZTG_vwr5kt.svg"
                         alt=""
                       />
                     </span>
@@ -157,7 +193,7 @@ class Home extends React.Component {
                   <div class="coin-data">
                     <span class="coin-image">
                       <img
-                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619804531/flashxchanger/btc-coin_porirf.svg"
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619874803/flashxchanger/BTC_ahcpqq.svg"
                         alt=""
                       />
                     </span>
@@ -188,7 +224,7 @@ class Home extends React.Component {
                   <div class="coin-data">
                     <span class="coin-image">
                       <img
-                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619804531/flashxchanger/oztg-coin_v3eppt.svg"
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619874803/flashxchanger/ETH_pwcvls.svg"
                         alt=""
                       />
                     </span>
@@ -337,7 +373,10 @@ class Home extends React.Component {
                   data-aos-duration="1200"
                   class="feature purple-card">
                   <div class="feature-image">
-                    <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_01_w9f3fi.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_01_w9f3fi.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="feature-name">Exchange</div>
                   <div class="feature-desc">
@@ -356,7 +395,10 @@ class Home extends React.Component {
                   data-aos-delay="200"
                   class="feature">
                   <div class="feature-image">
-                    <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_02_reqluw.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_02_reqluw.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="feature-name">Order Types</div>
                   <div class="feature-desc">
@@ -373,7 +415,10 @@ class Home extends React.Component {
                   data-aos-delay="400"
                   class="feature">
                   <div class="feature-image">
-                    <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_03_kgsigt.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_03_kgsigt.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="feature-name">Customizable Interface</div>
                   <div class="feature-desc">
@@ -390,7 +435,10 @@ class Home extends React.Component {
                   data-aos-delay="600"
                   class="feature blue-card">
                   <div class="feature-image">
-                    <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_04_umfzsv.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_04_umfzsv.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="feature-name">Security</div>
                   <div class="feature-desc">
@@ -407,7 +455,10 @@ class Home extends React.Component {
                   data-aos-delay="800"
                   class="feature purple-card">
                   <div class="feature-image">
-                    <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_05_fexxzj.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_05_fexxzj.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="feature-name">Community</div>
                   <div class="feature-desc">
@@ -423,7 +474,10 @@ class Home extends React.Component {
                   data-aos-delay="1000"
                   class="feature">
                   <div class="feature-image">
-                    <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_06_mpywbk.svg" alt="" />
+                    <img
+                      src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_06_mpywbk.svg"
+                      alt=""
+                    />
                   </div>
                   <div class="feature-name">Industry Leading API</div>
                   <div class="feature-desc">
@@ -1165,7 +1219,9 @@ class Home extends React.Component {
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://t.me/FLASHMONI_ANNOUNCEMENTS">
+                    <a
+                      target="_blank"
+                      href="https://t.me/FLASHMONI_ANNOUNCEMENTS">
                       Announcements
                     </a>
                   </li>
@@ -1195,13 +1251,17 @@ class Home extends React.Component {
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://discord.com/invite/PrH2uMdKmw">
+                    <a
+                      target="_blank"
+                      href="https://discord.com/invite/PrH2uMdKmw">
                       Support
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://trade.flashxchanger.com/graphql">
-                    GraphQL
+                    <a
+                      target="_blank"
+                      href="https://trade.flashxchanger.com/graphql">
+                      GraphQL
                     </a>
                   </li>
                 </ul>
@@ -1257,28 +1317,72 @@ class Home extends React.Component {
               <div className="col-12 col-md-10">
                 <div className="row socials mt-5 mt-md-0 justify-content-end">
                   <div className="col-3 col-md-1">
-                    <a target="_blank" href="https://www.reddit.com/r/Flashmoni/"><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/reddit_rd4uby.svg" alt=""/></a>
+                    <a
+                      target="_blank"
+                      href="https://www.reddit.com/r/Flashmoni/">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/reddit_rd4uby.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 col-md-1">
-                    <a target="_blank" href="https://discord.gg/PrH2uMdKmw"><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/discord_iurz4w.svg" alt=""/></a>
+                    <a target="_blank" href="https://discord.gg/PrH2uMdKmw">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/discord_iurz4w.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 col-md-1">
-                    <a target="_blank" href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/git_duj0ir.svg" alt=""/></a>
+                    <a target="_blank" href="">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/git_duj0ir.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 col-md-1">
-                    <a target="_blank" href="https://blog.flashgroup.io/"><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/medium_tqnwnv.svg" alt=""/></a>
+                    <a target="_blank" href="https://blog.flashgroup.io/">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/medium_tqnwnv.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 mt-4 mt-md-0 col-md-1">
-                    <a target="_blank" href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/in_ayeut0.svg" alt=""/></a>
+                    <a target="_blank" href="">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/in_ayeut0.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 mt-4 mt-md-0 col-md-1">
-                    <a target="_blank" href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/instagram_s9i6s2.svg" alt=""/></a>
+                    <a target="_blank" href="">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/instagram_s9i6s2.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 mt-4 mt-md-0 col-md-1">
-                    <a target="_blank" href="https://twitter.com/Flashmoniltd"><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/twitter_oyrszp.svg" alt=""/></a>
+                    <a target="_blank" href="https://twitter.com/Flashmoniltd">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/twitter_oyrszp.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                   <div className="col-3 mt-4 mt-md-0 col-md-1">
-                    <a target="_blank" href="https://t.me/FLASHMONI_ANNOUNCEMENTS"><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/telegram_zyczcq.svg" alt=""/></a>
+                    <a
+                      target="_blank"
+                      href="https://t.me/FLASHMONI_ANNOUNCEMENTS">
+                      <img
+                        src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/telegram_zyczcq.svg"
+                        alt=""
+                      />
+                    </a>
                   </div>
                 </div>
               </div>
