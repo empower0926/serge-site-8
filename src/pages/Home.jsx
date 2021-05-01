@@ -1,12 +1,28 @@
 import React, { Component } from "react";
+import Cookies from "universal-cookie";
+import Cookie_Accept from "./cookie_accept_panel";
+const cookies = new Cookies();
+
+const nextYear = new Date();
+nextYear.setFullYear(new Date().getFullYear() + 10);
 class Home extends React.Component {
   constructor(props) {
     super(props);
-
-    this.state = {
-      cookieAccept: "",
-    };
+    if (cookies.get("FlashXchenger") === "fx") {
+      this.state = {
+        cookieAccept: "",
+      };
+    }else{
+      this.state = {
+        cookieAccept: <Cookie_Accept set={this.setcookie} />,
+      };
+    }
+   
   }
+  setcookie = () => {
+    this.setState({ cookieAccept: " " });
+    cookies.set("FlashXchenger", "fx", { expires: nextYear });
+  };
   selectpack(id) {
     let packs = ["Standard", "Premium", "Gold", "Elite"];
     packs.forEach((element) => {
@@ -1357,6 +1373,7 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+        {this.state.cookieAccept}
       </div>
     );
   }
