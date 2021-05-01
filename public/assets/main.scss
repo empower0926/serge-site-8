@@ -19,9 +19,60 @@ body {
   min-height: 100vh;
 }
 
+nav {
+  .navbar-toggler:focus,
+  .navbar-toggler:active,
+  .navbar-toggler-icon:focus {
+    outline: none;
+    box-shadow: none;
+  }
+
+  img {
+    padding: 1rem;
+    width: 150px;
+  }
+  .navbar-toggler-icon {
+    img {
+      width: 20px;
+      height: 20px;
+      padding: 0;
+    }
+  }
+  li {
+    a {
+      color: white !important;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      box-sizing: border-box;
+      border-radius: 15px;
+      display: inline-block !important;
+      padding: 0.5rem 2rem !important;
+      margin: 0 0.5rem;
+      transition: 0.3s !important;
+      font-weight: bold;
+
+      @include screen(small) {
+        background: none;
+        border: none;
+      }
+      &:hover {
+        background: linear-gradient(100.7deg, #293c8b 0%, #3795a1 100%);
+      }
+    }
+  }
+
+  .sign-up {
+    background: linear-gradient(100.7deg, #293c8b 0%, #3795a1 100%);
+    border: none;
+    @include screen(small) {
+      background: none;
+      border: none;
+    }
+  }
+}
+
 .top {
   text-align: center;
-  min-height: 70vh;
+  // min-height: 70vh;
   .intro {
     margin-top: 12rem;
     font-weight: bold;
@@ -29,7 +80,7 @@ body {
     @include screen(small) {
       font-size: 20px;
     }
-    animation: 20s bgchange infinite;
+    // animation: 20s bgchange infinite;
   }
 
   .contact-us {
@@ -50,11 +101,11 @@ body {
     left: 0;
     width: 100%;
     height: 80vh;
-    background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png)
-      no-repeat;
-    background-size: cover;
-    background-position: center;
-    animation: 40s changebg 10s infinite;
+    // background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png)
+    //   no-repeat;
+    // background-size: cover;
+    // background-position: center;
+    // animation: 40s changebg 10s infinite;
     @keyframes changebg {
       0% {
         background: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619847905/flashxchanger/slide-1_gscsmr.png)

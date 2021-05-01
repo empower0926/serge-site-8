@@ -29,11 +29,7 @@
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
     <!-- JS -->
-    <script
-      src="https://code.jquery.com/jquery-3.2.1.slim.min.js"
-      integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-      crossorigin="anonymous"
-    ></script>
+
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
@@ -45,238 +41,295 @@
 
     <script>
       AOS.init();
-      
-$(document).ready(function(){
 
-$.ajax({
-	      url: 'https://maximsky.asnoo.com/c/s7315/www/livechart/getcur.php',
-     	      type: 'get',
+      $(document).ready(function () {
+        $.ajax({
+          url: "https://maximsky.asnoo.com/c/s7315/www/livechart/getcur.php",
+          type: "get",
 
-              success: function(data, status) {
-					console.log('ajax_getcur - ok');
-			}
-});
-	$.ajax({
-	      url: 'https://maximsky.asnoo.com/c/s7315/www/livechart/ajax_curdata.php',
-     	      type: 'get',
+          success: function (data, status) {
+            console.log("ajax_getcur - ok");
+          },
+        });
+        $.ajax({
+          url:
+            "https://maximsky.asnoo.com/c/s7315/www/livechart/ajax_curdata.php",
+          type: "get",
 
-              success: function(data, status) {
-					console.log('ajax_getcurdata - ok');
-					var curdata=JSON.parse(data);
+          success: function (data, status) {
+            console.log("ajax_getcurdata - ok");
+            var curdata = JSON.parse(data);
 
+            //chart 1
+            var ctx1 = document.getElementById("live_chart_1").getContext("2d");
 
+            var chart1 = new Chart(ctx1, {
+              type: "line",
 
+              // The data for our dataset
+              data: {
+                labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+                // Information about the dataset
+                datasets: [
+                  {
+                    //label: "Rainfall",
+                    backgroundColor: "#ecd9ff",
+                    borderColor: "#358A9E",
 
+                    data: [
+                      curdata[11][1],
+                      curdata[10][1],
+                      curdata[9][1],
+                      curdata[8][1],
+                      curdata[7][1],
+                      curdata[6][1],
+                      curdata[5][1],
+                      curdata[4][1],
+                      curdata[3][1],
+                      curdata[2][1],
+                      curdata[1][1],
+                      curdata[0][1],
+                    ],
 
+                    fill: false,
+                    tension: 0.4,
+                    pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+                    pointBorderColor: "rgba(0, 0, 0, 0.01)",
+                  },
+                ],
+              },
 
+              // Configuration options
+              options: {
+                layout: {
+                  padding: 10,
+                },
+                legend: {
+                  display: false,
+                  position: "bottom",
+                },
+                //title: {
+                //			display: true,
+                //		text: 'Precipitation in Toronto'
+                //},
+                scales: {
+                  yAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "",
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "day",
+                      },
+                    },
+                  ],
+                },
+              },
+            });
 
-//chart 1
-var ctx1 = document.getElementById('live_chart_1').getContext('2d');
+            //chart 2
+            var ctx2 = document.getElementById("live_chart_2").getContext("2d");
+            var chart2 = new Chart(ctx2, {
+              // The type of chart we want to create
+              type: "line", // also try bar or other graph types
 
-var chart1 = new Chart(ctx1, 
-{
+              // The data for our dataset
+              data: {
+                labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+                // Information about the dataset
+                datasets: [
+                  {
+                    //label: "Rainfall",
+                    backgroundColor: "#ecd9ff",
+                    borderColor: "#358A9E",
+                    fill: false,
+                    tension: 0.4,
+                    data: [
+                      curdata[11][3],
+                      curdata[10][3],
+                      curdata[9][3],
+                      curdata[8][3],
+                      curdata[7][3],
+                      curdata[6][3],
+                      curdata[5][3],
+                      curdata[4][3],
+                      curdata[3][3],
+                      curdata[2][3],
+                      curdata[1][3],
+                      curdata[0][3],
+                    ],
+                    pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+                    pointBorderColor: "rgba(0, 0, 0, 0.01)",
+                  },
+                ],
+              },
 
-	type: 'line', 
+              // Configuration options
+              options: {
+                layout: {
+                  padding: 10,
+                },
+                legend: {
+                  display: false,
+                  position: "bottom",
+                },
+                //title: {
+                //			display: true,
+                //		text: 'Precipitation in Toronto'
+                //},
+                scales: {
+                  yAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "",
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "day",
+                      },
+                    },
+                  ],
+                },
+              },
+            });
 
-	// The data for our dataset
-	data: {
-		labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
-		// Information about the dataset
-    datasets: [{
-			//label: "Rainfall",
-			backgroundColor: '#ecd9ff',
-			borderColor: '#358A9E',
-		
-     
-      data: [curdata[11][1],curdata[10][1],curdata[9][1], curdata[8][1], curdata[7][1], curdata[6][1], curdata[5][1], curdata[4][1], curdata[3][1], curdata[2][1], curdata[1][1], curdata[0][1]],
-  
-      fill: false,
-      tension: 0.4,
-      pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-      pointBorderColor:'rgba(0, 0, 0, 0.01)',
- 
-		}]
-	},
+            //chart 3
+            var ctx3 = document.getElementById("live_chart_3").getContext("2d");
+            var chart3 = new Chart(ctx3, {
+              // The type of chart we want to create
+              type: "line", // also try bar or other graph types
 
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			display: false,
-			position: 'bottom',
-		},
-		//title: {
-//			display: true,
-	//		text: 'Precipitation in Toronto'
-		//},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: ''
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: 'day'
-				}
-			}]
-		}
-	}
-});
+              // The data for our dataset
+              data: {
+                labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
+                // Information about the dataset
+                datasets: [
+                  {
+                    //label: "Rainfall",
+                    backgroundColor: "#ecd9ff",
+                    borderColor: "#358A9E",
+                    fill: false,
+                    tension: 0.4,
+                    data: [
+                      curdata[11][5],
+                      curdata[10][5],
+                      curdata[9][5],
+                      curdata[8][5],
+                      curdata[7][5],
+                      curdata[6][5],
+                      curdata[5][5],
+                      curdata[4][5],
+                      curdata[3][5],
+                      curdata[2][5],
+                      curdata[1][5],
+                      curdata[0][5],
+                    ],
+                    pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+                    pointBorderColor: "rgba(0, 0, 0, 0.01)",
+                  },
+                ],
+              },
 
+              // Configuration options
+              options: {
+                layout: {
+                  padding: 10,
+                },
+                legend: {
+                  display: false,
+                  position: "bottom",
+                },
+                //title: {
+                //			display: true,
+                //		text: 'Precipitation in Toronto'
+                //},
+                scales: {
+                  yAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "",
+                      },
+                    },
+                  ],
+                  xAxes: [
+                    {
+                      scaleLabel: {
+                        display: false,
+                        labelString: "hour",
+                      },
+                    },
+                  ],
+                },
+              },
+            });
 
-//chart 2
-var ctx2 = document.getElementById('live_chart_2').getContext('2d');
-var chart2 = new Chart(ctx2,
- {
-	// The type of chart we want to create
-	type: 'line', // also try bar or other graph types
+            var coin_price = [curdata[0][1], curdata[0][3], curdata[0][5]];
+            var coin_volume = ["00,000,000", curdata[0][4], curdata[0][6]];
+            var coin_volume_change = [
+              "+0.00",
+              parseFloat(
+                ((curdata[0][4] - curdata[1][4]) / curdata[1][4]) * 100
+              ).toFixed(2),
+              parseFloat(
+                ((curdata[0][6] - curdata[1][6]) / curdata[1][6]) * 100
+              ).toFixed(2),
+            ];
 
-	// The data for our dataset
-	data: {
-		labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
-		// Information about the dataset
-    datasets: [{
-			//label: "Rainfall",
-			backgroundColor: '#ecd9ff',
-			borderColor: '#358A9E',
-			fill: false,
-      tension: 0.4,
-			data: [curdata[11][3],curdata[10][3],curdata[9][3], curdata[8][3], curdata[7][3], curdata[6][3], curdata[5][3], curdata[4][3], curdata[3][3], curdata[2][3], curdata[1][3], curdata[0][3]],
-			pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-      pointBorderColor:'rgba(0, 0, 0, 0.01)',
-		}]
-	},
+            if (coin_volume_change[0] > 0)
+              coin_volume_change[0] = "+" + coin_volume_change[0];
+            if (coin_volume_change[1] > 0)
+              coin_volume_change[1] = "+" + coin_volume_change[1];
+            if (coin_volume_change[2] > 0)
+              coin_volume_change[2] = "+" + coin_volume_change[2];
 
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			display: false,
-			position: 'bottom',
-		},
-		//title: {
-//			display: true,
-	//		text: 'Precipitation in Toronto'
-		//},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: ''
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: 'day'
-				}
-			}]
-		}
-	}
-});
+            coin_price[1] = coin_price[1].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
+            coin_price[2] = coin_price[2].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
+            coin_volume[1] = coin_volume[1].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
+            coin_volume[2] = coin_volume[2].replace(
+              /(\d)(?=(\d\d\d)+(?!\d))/g,
+              "$1,"
+            );
 
+            // // upd prices
 
-//chart 3
-var ctx3 = document.getElementById('live_chart_3').getContext('2d');
-var chart3 = new Chart(ctx3, {
-	// The type of chart we want to create
-	type: 'line', // also try bar or other graph types
+            for (let index = 0; index < 3; index++) {
+              let i = index + 1;
 
-	// The data for our dataset
-	data: {
-		labels: ["", "", "", "", "", "", "", "", "", "", "", ""],
-		// Information about the dataset
-    datasets: [{
-			//label: "Rainfall",
-			backgroundColor: '#ecd9ff',
-			borderColor: '#358A9E',
-			fill: false,
-      tension: 0.4,
-			data: [curdata[11][5],curdata[10][5],curdata[9][5], curdata[8][5], curdata[7][5], curdata[6][5], curdata[5][5], curdata[4][5], curdata[3][5], curdata[2][5], curdata[1][5], curdata[0][5]],
-			pointBackgroundColor:'rgba(0, 0, 0, 0.01)',
-      pointBorderColor:'rgba(0, 0, 0, 0.01)',
-		}]
-	},
-
-	// Configuration options
-	options: {
-    layout: {
-      padding: 10,
-    },
-		legend: {
-			display: false,
-			position: 'bottom',
-		},
-		//title: {
-//			display: true,
-	//		text: 'Precipitation in Toronto'
-		//},
-		scales: {
-			yAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: ''
-				}
-			}],
-			xAxes: [{
-				scaleLabel: {
-					display: false,
-					labelString: 'hour'
-				}
-			}]
-		}
-	}
-});
-
-
-var coin_price = [curdata[0][1], curdata[0][3], curdata[0][5]];
-var coin_volume = ['00,000,000', curdata[0][4], curdata[0][6]];
-var coin_volume_change = ['+0.00', parseFloat( (curdata[0][4]-curdata[1][4])/curdata[1][4]*100 ).toFixed(2), parseFloat( (curdata[0][6]-curdata[1][6])/curdata[1][6]*100 ).toFixed(2)];
-
-if (coin_volume_change[0]>0) coin_volume_change[0]='+'+coin_volume_change[0];
-if (coin_volume_change[1]>0) coin_volume_change[1]='+'+coin_volume_change[1];
-if (coin_volume_change[2]>0) coin_volume_change[2]='+'+coin_volume_change[2];
-
-
-coin_price[1]=coin_price[1].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-coin_price[2]=coin_price[2].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-coin_volume[1]=coin_volume[1].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-coin_volume[2]=coin_volume[2].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
-
-
-
-
-// // upd prices
-
-
-for (let index = 0; index < 3; index++) {
-  let i=index+1;
-
- document.getElementById('coin-value'+i).innerHTML='$ '+coin_price[index];
- document.getElementById('usdt'+i).innerHTML=coin_volume[index]+'USDT';
- document.getElementById('percent'+i).innerHTML=coin_volume_change[index]+'%';
-  
-}
-
-	      },
-	      error: function(xhr, desc, err) {
-              console.log(xhr);
-              console.log("Details: " + desc + "\nError:" + err);
-      	      }
-    	});
-
-
-
-});
-
-        </script>
-  
-</body>
+              document.getElementById("coin-value" + i).innerHTML =
+                "$ " + coin_price[index];
+              document.getElementById("usdt" + i).innerHTML =
+                coin_volume[index] + "USDT";
+              document.getElementById("percent" + i).innerHTML =
+                coin_volume_change[index] + "%";
+            }
+          },
+          error: function (xhr, desc, err) {
+            console.log(xhr);
+            console.log("Details: " + desc + "\nError:" + err);
+          },
+        });
+      });
+    </script>
+  </body>
 </html>

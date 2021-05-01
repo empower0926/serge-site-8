@@ -21,6 +21,42 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <div className="container mt-4">
+          <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid">
+              <a class="navbar-brand" href="#">
+                <img src="https://flashxchanger.com/assets/images/logo.svg" alt=""/>
+              </a>
+              <button
+                class="navbar-toggler"
+                type="button"
+                data-bs-toggle="collapse"
+                data-bs-target="#navbarNav"
+                aria-controls="navbarNav"
+                aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon">
+                  <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619851175/flashxchanger/menu_icon_pniof7.svg" alt=""/>
+                </span>
+              </button>
+              <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav">
+                  <li class="nav-item">
+                    <a class="nav-link active" aria-current="page" href="#">
+                      Sign In
+                    </a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link sign-up" href="#">
+                      Sign Up
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </nav>
+        </div>
+
         <section class="top">
           <div className="bg"></div>
           <div class="container">
@@ -80,11 +116,19 @@ class Home extends React.Component {
                     <span class="coin-name">OZTG/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value" id="coin-value1">$ 0.137</div>
+                    <div class="coin-value" id="coin-value1">
+                      $ 0.137
+                    </div>
                   </div>
-                  <span class="usdt" id="usdt1">00, 000, 000</span>
-                  <div class="percent" id="percent1">+ 0.00%</div>
-                  <div class="chart"><canvas id="live_chart_1" ></canvas></div>
+                  <span class="usdt" id="usdt1">
+                    00, 000, 000
+                  </span>
+                  <div class="percent" id="percent1">
+                    + 0.00%
+                  </div>
+                  <div class="chart">
+                    <canvas id="live_chart_1"></canvas>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
@@ -99,11 +143,19 @@ class Home extends React.Component {
                     <span class="coin-name">BTC/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value" id="coin-value2">$ 0.137</div>
+                    <div class="coin-value" id="coin-value2">
+                      $ 0.137
+                    </div>
                   </div>
-                  <span class="usdt" id="usdt2">00, 000, 000</span>
-                  <div class="percent" id="percent2">+ 0.00%</div>
-                  <div class="chart"><canvas id="live_chart_2" ></canvas></div>
+                  <span class="usdt" id="usdt2">
+                    00, 000, 000
+                  </span>
+                  <div class="percent" id="percent2">
+                    + 0.00%
+                  </div>
+                  <div class="chart">
+                    <canvas id="live_chart_2"></canvas>
+                  </div>
                 </div>
               </div>
               <div class="col-md-4">
@@ -122,11 +174,19 @@ class Home extends React.Component {
                     <span class="coin-name">ETH/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value" id="coin-value3">$ 0.137</div>
+                    <div class="coin-value" id="coin-value3">
+                      $ 0.137
+                    </div>
                   </div>
-                  <span class="usdt" id="usdt3">00, 000, 000</span>
-                  <div class="percent" id="percent3">+ 0.00%</div>
-                  <div class="chart"><canvas id="live_chart_3" ></canvas></div>
+                  <span class="usdt" id="usdt3">
+                    00, 000, 000
+                  </span>
+                  <div class="percent" id="percent3">
+                    + 0.00%
+                  </div>
+                  <div class="chart">
+                    <canvas id="live_chart_3"></canvas>
+                  </div>
                 </div>
               </div>
             </div>
