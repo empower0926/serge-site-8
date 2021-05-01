@@ -8,6 +8,7 @@
   font-weight: bold;
   margin-top: 2rem;
   font-size: 1rem !important;
+  cursor: pointer;
 }
 
 h2 {
@@ -40,4 +41,8 @@ section {
   );
   border-radius: 60px;
   padding: 1rem 0;
+}
+
+.modal-header, .modal-footer{
+  border: none !important;
 }

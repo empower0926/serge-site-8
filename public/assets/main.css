@@ -9,6 +9,7 @@
   font-weight: bold;
   margin-top: 2rem;
   font-size: 1rem !important;
+  cursor: pointer;
 }
 
 h2 {
@@ -44,6 +45,10 @@ section {
   background: linear-gradient(206.27deg, #368c9f 15.28%, rgba(6, 6, 43, 0.1) 68.37%);
   border-radius: 60px;
   padding: 1rem 0;
+}
+
+.modal-header, .modal-footer {
+  border: none !important;
 }
 
 .range-slider {
