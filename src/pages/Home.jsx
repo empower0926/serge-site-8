@@ -83,7 +83,7 @@ class Home extends React.Component {
                   </div>
                   <span class="usdt">00, 000, 000</span>
                   <div class="percent">+ 0.00%</div>
-                  <div class="chart"></div>
+                  <div class="chart"><canvas id="live_chart_1" ></canvas></div>
                 </div>
               </div>
               <div class="col-md-4">
@@ -102,7 +102,7 @@ class Home extends React.Component {
                   </div>
                   <span class="usdt">00, 000, 000</span>
                   <div class="percent">+ 0.00%</div>
-                  <div class="chart">chart goes here</div>
+                  <div class="chart"><canvas id="live_chart_2" ></canvas></div>
                 </div>
               </div>
               <div class="col-md-4">
@@ -125,7 +125,7 @@ class Home extends React.Component {
                   </div>
                   <span class="usdt">00, 000, 000</span>
                   <div class="percent">+ 0.00%</div>
-                  <div class="chart"><canvas id="live_chart_1" ></canvas></div>
+                  <div class="chart"><canvas id="live_chart_3" ></canvas></div>
                 </div>
               </div>
             </div>
@@ -140,9 +140,6 @@ class Home extends React.Component {
                   Why is FlashXChanger Different?
                 </h2>
               </div>
-              <span class="usdt">00, 000, 000</span>
-              <div class="percent">+ 0.00%</div>
-              <div class="chart"><canvas id="live_chart_2" ></canvas></div>
             </div>
 
             <div class="row">
@@ -227,9 +224,6 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
-              <span class="usdt">00, 000, 000</span>
-              <div class="percent">+ 0.00%</div>
-              <div class="chart" ><canvas id="live_chart_3" ></canvas></div>
             </div>
 
             <div class="row try">
