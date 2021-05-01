@@ -1199,6 +1199,11 @@ class Home extends React.Component {
                       Support
                     </a>
                   </li>
+                  <li>
+                    <a target="_blank" href="https://trade.flashxchanger.com/graphql">
+                    GraphQL
+                    </a>
+                  </li>
                 </ul>
                 <span className="d-block d-md-none">
                   <img
