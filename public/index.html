@@ -45,7 +45,100 @@
 
     <script>
       AOS.init();
+//fp_constant_raw='STANDARD,685,10,686.3712337;STANDARD,685,30,701.6321356;STANDARD,685,60,727.3362285;STANDARD,685,90,763.0732964;STANDARD,685,180,913.4135029;STANDARD,685,270,1174.830966;STANDARD,685,360,1682.936915;PREMIUM,3425,10,3466.17473;PREMIUM,3425,30,3543.242285;PREMIUM,3425,60,3673.047954;PREMIUM,3425,90,3853.520147;PREMIUM,3425,180,4612.738189;PREMIUM,3425,270,5932.896376;PREMIUM,3425,360,8498.83142;GOLD,13700,10,14001.97317;GOLD,13700,30,14313.29557;GOLD,13700,60,14837.65906;GOLD,13700,90,15566.69525;GOLD,13700,180,18633.63546;GOLD,13700,270,23966.5517;GOLD,13700,360,34331.91306;ELITE,68500,10,72068.97953;ELITE,68500,30,73671.37424;ELITE,68500,60,76370.30399;ELITE,68500,90,80122.69612;ELITE,68500,180,95908.4178;ELITE,68500,270,123357.2514;ELITE,68500,360,176708.3761;'; // to know final pack value depending on days;
+fp_constant_raw='STANDARD,685,10,693.234946;STANDARD,685,30,700.200533;STANDARD,685,60,725.8547888;STANDARD,685,90,770.7040293;STANDARD,685,180,922.5476379;STANDARD,685,270,1124.318433;STANDARD,685,360,1639.807318;PREMIUM,3425,10,3534.811853;PREMIUM,3425,30,3570.329451;PREMIUM,3425,60,3701.140755;PREMIUM,3425,90,3929.827476;PREMIUM,3425,180,4704.07954;PREMIUM,3425,270,5732.910819;PREMIUM,3425,360,8361.393751;GOLD,13700,10,14825.61865;GOLD,13700,30,14974.58566;GOLD,13700,60,15523.23113;GOLD,13700,90,16482.3832;GOLD,13700,180,19729.73166;GOLD,13700,270,24044.82984;GOLD,13700,360,35069.14661;ELITE,68500,10,78932.69187;ELITE,68500,30,79725.80326;ELITE,68500,60,82646.83238;ELITE,68500,90,87753.42908;ELITE,68500,180,105042.5528;ELITE,68500,270,128016.4552;ELITE,68500,360,186710.7343';
+fpv_ar=fp_constant_raw.split(';');
+var final_pack_value=[];
+fpv_ar.forEach(function(item,index) {
+	fpv_item_ar=item.split(',');
+	final_pack_value[ fpv_item_ar[0] + '-' +fpv_item_ar[2] ]=fpv_item_ar[3];
+});
+
+
+
+      $(document).ready(function(){
+        var coin_value="0.137";
+$('.stats').hide();
+$('.nsc-video-editor').remove();
+$('.nsc-panel').remove();
+$('.nsc-content-camera').remove();
+
+
+
+function pack_calc(coin_value_after){
+
+      $("#result_temp").text(coin_value_after);
+
       
+  $('.package').each( function (key0,value0){
+    if (key0==0) ($(this).find('.package-name').html('STANDARD'));
+			if (key0==1) ($(this).find('.package-name').html('PREMIUM'));
+			if (key0==2) ($(this).find('.package-name').html('GOLD'));
+			if (key0==3) ($(this).find('.package-name').html('ELITE'));
+
+    try {
+      var pack_coin_num=$(this).find('.number').html().replace(',','');
+    var pack_value=pack_coin_num*coin_value;
+    var pack_coin_num_after=parseInt(pack_coin_num)+(final_pack_value[$(this).find('.package-name').html()+'-360']-pack_value)/coin_value_after;
+    var pack_value_after=coin_value_after*pack_coin_num_after;
+    var pack_year_profit=(pack_value_after)/pack_value*100;
+   
+    $(this).find('.rate').each( function(key1, value1) {
+                            if (key1==0) $(this).html(parseFloat(pack_year_profit).toFixed(2)+'%');
+                            if (key1==0) $(this).addClass('yearprofit');
+                            if (key1==1) $(this).html(coin_value);
+                            });
+    } catch (error) {
+     console.log(error)
+    }                        
+  });
+
+  }
+  
+function stats_calc(el,coin_value_after){
+    var package_name=$(el).parent().parent().find('.package-name').html();
+    var pack_coin_num=$(el).parent().parent().find('.number').html().replace(',','');
+    var pack_value=pack_coin_num*coin_value;
+
+    $('.stats .stat-card').each( function () {
+      var card_days=parseInt($(this).find('#days').html().replace(' DAYS',''));
+      var pack_coin_num_after=parseInt(pack_coin_num) + (final_pack_value[package_name+'-'+card_days]-pack_value)/coin_value_after;
+      var pack_value_after=coin_value_after*pack_coin_num_after;
+
+      var pack_year_profit=(pack_value_after)/pack_value*100;
+
+      $(this).find('#percentage').html(parseFloat(	pack_year_profit	).toFixed(2)+'%');
+      $(this).find('#reward').html('$'+parseFloat(		pack_value_after-pack_value	).toFixed(2));
+      $(this).find('#usdt').html(parseFloat(		pack_value_after-pack_value	).toFixed(2));
+      $(this).find('#oztg').html(parseFloat(		(pack_value_after-pack_value)/coin_value_after	).toFixed(2));
+
+    });
+  }
+
+pack_calc(1);
+
+var selected_plan='';
+
+$('.package .select-btn').on('click', function () {
+  $('.stats').show();
+
+    selected_plan=this;
+    stats_calc(selected_plan,$("#range").val());
+
+});
+
+
+
+$("#range").on("input", function(){
+  pack_calc($(this).val());
+ 
+  if(selected_plan!='') stats_calc(selected_plan,$(this).val());
+});
+});
+
+
+      
+
 $(document).ready(function(){
 
 $.ajax({

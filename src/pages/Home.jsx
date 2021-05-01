@@ -482,7 +482,7 @@ class Home extends React.Component {
                     </div>
 
                     <div class="col-6 col-md-12 package-value">
-                      <span>5,000</span>
+                      <span class="number">5,000</span>
                     </div>
                   </div>
 
@@ -530,7 +530,7 @@ class Home extends React.Component {
                     </div>
 
                     <div class="col-6 col-md-12 package-value">
-                      <span>25,000</span>
+                      <span class="number">25,000</span>
                     </div>
                   </div>
 
@@ -578,7 +578,7 @@ class Home extends React.Component {
                     </div>
 
                     <div class="col-6 col-md-12 package-value">
-                      <span>100,000</span>
+                      <span class="number">100,000</span>
                     </div>
                   </div>
 
@@ -626,7 +626,7 @@ class Home extends React.Component {
                     </div>
 
                     <div class="col-6 col-md-12 package-value">
-                      <span>500,000</span>
+                      <span class="number">500,000</span>
                     </div>
                   </div>
 
@@ -639,7 +639,7 @@ class Home extends React.Component {
                     <span class="col-2 col-md-12 p-0 select-btn">
                       <span
                         onClick={() => this.selectpack("Elite")}
-                        class="d-none d-md-block select mt-3">
+                        class="d-none d-md-block select mt-3 ">
                         Select
                       </span>
                       <span class="d-block d-md-none select mt-2 mr-0">
@@ -678,6 +678,192 @@ class Home extends React.Component {
             </div>
           </div>
         </section>
+
+  {/* <!-- yearly stats --> */}
+  <section class="stats mt-5">
+                    .<div class="container-fluid">
+                        <div id="reward-card-container" class="row seven-cols d-flex justify-content-center">
+                            {/* <!-- show your reward cards here --> */}
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">10 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">30 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">60 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">90 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">180 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">270 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            {/* <!-- card --> */}
+                            <div class="col-md-1">
+                                <div class="stat-card">
+                                    <h6 id="days">360 DAYS</h6>
+                                    <p id="percentage" class="percentage">72.43%</p>
+                                    <div class="row">
+                                        <div class="col-xl-12 mb-4 d-flex justify-content-center">
+                                            <span style={{ fontSize: "14px" }}>PER YEAR</span>
+                                        </div>
+                                        <div class="col-xl-12" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>Reward</div>
+                                            <div id="reward" style={{ float: "right" }} class="card-text">$2.18</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>USDT</div>
+                                            <div id="usdt" style={{ float: "right" }} class="card-text">2.00</div>
+                                        </div>
+                                        <div class="col-xl-12 mt-2" style={{ overflow: "hidden" }}>
+                                            <div style={{ float: "left" }}>OZTG</div>
+                                            <div id="oztg" style={{ float: "right" }} class="card-text">6.00</div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </section>
+
 
         <section class="trade">
           <div class="container">
