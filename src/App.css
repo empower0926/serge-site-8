@@ -28,6 +28,30 @@
   color: #61dafb;
 }
 
+.heading {
+  margin-top: 20px;
+}
+
+.heading2 {
+  font-family: "Heebo", sans-serif;
+  margin-bottom: 20px;
+}
+
+.aml {
+  word-break: break-word;
+}
+
+.custom_color {
+  font-weight: 200px;
+  font-family: "Heebo", sans-serif;
+  color: #b158e2;
+}
+
+.rows {
+  text-align: left;
+  padding: 50px;
+}
+
 @keyframes App-logo-spin {
   from {
     transform: rotate(0deg);

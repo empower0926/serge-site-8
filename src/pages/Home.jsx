@@ -1180,17 +1180,17 @@ class Home extends React.Component {
               <div className="col-md-6">
                 <ul>
                   <li>
-                    <a target="_blank" href="https://flashxchanger.com/terms">
+                    <a target="_blank" href="/terms">
                       Term & Conditions
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="">
+                    <a target="_blank" href="/privacy">
                       Privacy policy
                     </a>
                   </li>
                   <li>
-                    <a target="_blank" href="https://flashxchanger.com/internal_aml_and_ctf_policy">
+                    <a target="_blank" href="/cookie">
                       Cookie Policy
                     </a>
                   </li>
