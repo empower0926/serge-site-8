@@ -1,0 +1,43 @@
+
+  .range-wrap .range-slider {
+    -webkit-appearance: none;
+    width: 100%;
+    background: rgba(42, 7, 196, 0.151);
+    border: 1px solid #3120a9;
+    border-radius: 25px;
+    height: 15px;
+    -webkit-animation: 1s gradient ease infinite !important;
+    animation: 1s gradient ease infinite !important;
+  
+    &:hover {
+      cursor: pointer;
+    }
+  }
+  .range-wrap .range-slider:focus {
+    outline: none;
+  }
+  
+   .range-wrap .range-slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    display: block;
+    background-color: #f7f7f7;
+    border: 1px solid #e52564;
+    width: 35px;
+    height: 35px;
+    position: relative;
+    text-align: center;
+    line-height: 144px;
+    border-radius: 50%;
+  }
+  
+ .range-wrap .range-slider::-moz-range-thumb {
+    display: block;
+    width: 35px;
+    height: 35px;
+    border: 1px solid #e52564;
+    position: relative;
+    text-align: center;
+    line-height: 144px;
+    border-radius: 50%;
+  }
+  

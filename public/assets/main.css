@@ -1,0 +1,508 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@300;400;500;700&display=swap");
+.a-btn {
+  display: inline-block;
+  background: linear-gradient(100.7deg, #293c8b 0%, #3795a1 100%);
+  border-radius: 15px;
+  color: white !important;
+  padding: 0.8rem 4rem;
+  text-decoration: none;
+  font-weight: bold;
+  margin-top: 2rem;
+  font-size: 1rem !important;
+}
+
+h2 {
+  text-align: center;
+  font-size: 40px;
+  font-weight: 600;
+  font-style: normal;
+}
+
+@media screen and (max-width: 576px) {
+  h2 {
+    font-size: 20px;
+  }
+}
+
+section {
+  margin-top: 8rem;
+}
+
+@media screen and (max-width: 576px) {
+  section {
+    margin-top: 4rem;
+  }
+}
+
+.purple-card {
+  background: rgba(162, 80, 208, 0.4);
+  border-radius: 60px;
+  padding: 1rem 0;
+}
+
+.blue-card {
+  background: linear-gradient(206.27deg, #368C9F 15.28%, rgba(42, 66, 141, 0) 68.37%);
+  border-radius: 60px;
+  padding: 1rem 0;
+}
+
+.range-wrap .range-slider {
+  -webkit-appearance: none;
+  width: 100%;
+  background: rgba(42, 7, 196, 0.151);
+  border: 1px solid #3120a9;
+  border-radius: 25px;
+  height: 15px;
+  -webkit-animation: 1s gradient ease infinite !important;
+  animation: 1s gradient ease infinite !important;
+}
+
+.range-wrap .range-slider:hover {
+  cursor: pointer;
+}
+
+.range-wrap .range-slider:focus {
+  outline: none;
+}
+
+.range-wrap .range-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  display: block;
+  background-color: #f7f7f7;
+  border: 1px solid #e52564;
+  width: 35px;
+  height: 35px;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+}
+
+.range-wrap .range-slider::-moz-range-thumb {
+  display: block;
+  width: 35px;
+  height: 35px;
+  border: 1px solid #e52564;
+  position: relative;
+  text-align: center;
+  line-height: 144px;
+  border-radius: 50%;
+}
+
+body {
+  color: white !important;
+  font-family: "Red Hat Display", sans-serif;
+  font-size: 15px;
+  background: linear-gradient(156.2deg, #b158e2 0%, #7367f0 0%, #06062b 28.15%) no-repeat;
+  min-height: 100vh;
+}
+
+.top {
+  text-align: center;
+}
+
+.top .intro {
+  margin-top: 12rem;
+  font-weight: bold;
+  font-size: 60px;
+}
+
+@media screen and (max-width: 576px) {
+  .top .intro {
+    font-size: 20px;
+  }
+}
+
+.top .contact-us .contact-intro {
+  margin-top: 2rem;
+  font-size: 20px;
+  font-weight: normal;
+}
+
+@media screen and (max-width: 576px) {
+  .top .contact-us .contact-intro {
+    font-size: 12px;
+  }
+}
+
+.coin-details {
+  margin-top: 6rem;
+}
+
+.coin-details .coin {
+  padding: 1.6rem 0;
+  margin: 0.5rem 0;
+  text-align: center;
+  background: rgba(162, 80, 208, 0.4);
+  border-radius: 28px;
+}
+
+.coin-details .coin .coin-data .coin-image img {
+  width: 32px;
+}
+
+.coin-details .coin .coin-data .coin-name {
+  margin-left: 1rem;
+}
+
+.coin-details .coin .coin-value {
+  font-size: 40px;
+  font-weight: bold;
+}
+
+@media screen and (max-width: 576px) {
+  .coin-details .coin .coin-value {
+    font-size: 30px;
+  }
+}
+
+.coin-details .coin .usdt {
+  font-weight: bold;
+}
+
+.coin-details .coin .usdt::before {
+  content: "Volume";
+  font-weight: normal;
+  display: block;
+  color: rgba(255, 255, 255, 0.5);
+  line-height: 20px;
+}
+
+.coin-details .coin .usdt::after {
+  content: " USDT";
+  line-height: 20px;
+}
+
+.coin-details .coin .percent {
+  margin-top: 1rem;
+  font-weight: 900;
+  color: #368d9f;
+}
+
+.why {
+  font-size: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .why {
+    font-size: 12px;
+  }
+}
+
+.why .pie img {
+  -webkit-transform: translateZ(0) !important;
+          transform: translateZ(0) !important;
+  width: 100%;
+}
+
+.why .point {
+  margin-top: 4rem;
+  padding: 0 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .why .point {
+    margin-top: 1.2rem;
+  }
+}
+
+.why .point img {
+  margin-top: 0.5rem;
+  width: 42px;
+}
+
+@media screen and (max-width: 576px) {
+  .why .point img {
+    width: 32px;
+  }
+}
+
+.why .point span {
+  color: #368d9f;
+  font-weight: bold;
+}
+
+.why .try {
+  margin-top: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .why .try {
+    margin-top: 0;
+  }
+}
+
+.features-desktop .feature {
+  min-height: 450px;
+  margin-top: 2rem;
+  text-align: justify;
+  text-align-last: center;
+  padding: 2rem;
+}
+
+@media screen and (max-width: 576px) {
+  .features-desktop .feature {
+    min-height: 275px;
+  }
+}
+
+.features-desktop .feature .feature-name {
+  font-size: 30px;
+  font-weight: bold;
+}
+
+.features-desktop .feature .feature-desc {
+  margin-top: 1.2rem;
+  line-height: 30px;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .features-desktop .feature .feature-desc {
+    font-size: 12px;
+  }
+}
+
+.stable-coin h2 {
+  text-align: left;
+}
+
+@media screen and (max-width: 576px) {
+  .stable-coin h2 {
+    text-align: center;
+  }
+}
+
+.stable-coin .point {
+  margin-top: 1rem;
+  padding: 0 1rem;
+}
+
+.stable-coin .point img {
+  margin-top: 0.2rem;
+  width: 42px;
+}
+
+@media screen and (max-width: 576px) {
+  .stable-coin .point img {
+    width: 32px;
+  }
+}
+
+.stable-coin .stable-coin-image-desktop img,
+.stable-coin .stable-coin-image-mobile img {
+  -webkit-transform: translateZ(0) !important;
+          transform: translateZ(0) !important;
+  width: 100%;
+}
+
+.packages .intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.packages .package {
+  margin-top: 1rem;
+  text-align: center;
+  background-color: #000231;
+  border-radius: 28px;
+  padding: 2rem;
+}
+
+.packages .package .package-icon img {
+  width: 35px;
+}
+
+.packages .package .d-flex {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .d-flex {
+    -webkit-box-pack: left;
+        -ms-flex-pack: left;
+            justify-content: left;
+  }
+}
+
+.packages .package .package-name {
+  font-size: 20px;
+  font-weight: 500;
+  margin-left: 1rem;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .package-name {
+    font-size: 15px;
+  }
+}
+
+.packages .package .package-value {
+  margin-top: 1rem;
+  font-size: 30px;
+  font-weight: 900;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .package-value {
+    margin-top: 0;
+    text-align: right;
+    font-size: 20px;
+    padding-right: 0;
+  }
+}
+
+.packages .package .profit {
+  margin-top: 1rem;
+  font-weight: bold;
+  color: #368d9f;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .profit {
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
+.packages .package .profit::before {
+  content: "Your Profit";
+  display: block;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .profit::before {
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
+.packages .package .price {
+  margin: 1.5rem 0;
+  font-weight: bold;
+  line-height: 20px;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .price {
+    margin: .5rem 0;
+    text-align: left;
+    font-size: 12px;
+  }
+}
+
+.packages .package .price::before {
+  content: "USDT Purchase Price";
+  display: block;
+  line-height: 20px;
+  font-weight: 400;
+  margin-bottom: 0.2rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .price::before {
+    font-size: 12px;
+    text-align: left;
+  }
+}
+
+.packages .package .select {
+  padding: 0.5rem 2rem;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.packages .package .select:hover {
+  background: #368d9f;
+}
+
+@media screen and (max-width: 576px) {
+  .packages .package .select {
+    padding: 0;
+    width: 50px;
+    height: 50px;
+  }
+}
+
+.trade {
+  overflow-x: hidden;
+  text-align: justify;
+}
+
+.trade img {
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+  width: 100%;
+}
+
+@media screen and (max-width: 576px) {
+  .trade img {
+    -webkit-transform: translateX(20px) translateZ(0);
+            transform: translateX(20px) translateZ(0);
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .trade .trade-desc {
+    text-align: justify;
+    text-align-last: center;
+    padding: 0 2rem;
+  }
+}
+
+.trade .trade-desc h2 {
+  text-align: left !important;
+}
+
+@media screen and (max-width: 576px) {
+  .trade .trade-desc h2 {
+    text-align: center !important;
+  }
+}
+
+.trade a {
+  -webkit-transform-origin: center !important;
+          transform-origin: center !important;
+}
+
+.trade .h-moblie {
+  -webkit-transform: translateY(60px);
+          transform: translateY(60px);
+}
+
+.start-now a {
+  font-weight: 700;
+  min-width: 195px;
+  text-align: center;
+  display: inline-block;
+  color: white;
+  padding: 0.8rem 2rem;
+  text-decoration: none;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 15px;
+}
+
+.start-now .trading {
+  border: none;
+  background: linear-gradient(100.7deg, #293c8b 0%, #3795a1 100%);
+}
+/*# sourceMappingURL=main.css.map */
