@@ -5,7 +5,7 @@
   border: 1px solid var(--main-color);
   border-radius: 25px;
   height: 3px;
-  // animation: 1s gradient ease infinite !important;
+  animation: 1s gradient ease infinite !important;
 }
 
 @keyframes gradient {
@@ -51,11 +51,11 @@
   text-align: center;
   line-height: 144px;
   border-radius: 6px;
-  transform: rotate(-45px);
   border: 3px solid rgba(255, 255, 255, 0.8);
   box-shadow: 2px 2px 6px rgba(101, 2, 126, 0.7),
-    inset 0px -3px 8px rgba(56, 56, 56, 0.4),
-    inset 0px 2px 3px rgba(153, 0, 255, 0.4);
+  inset 0px -3px 8px rgba(56, 56, 56, 0.4),
+  inset 0px 2px 3px rgba(153, 0, 255, 0.4);
+  transform: rotate(-45px);
 }
 
 .range-slider::-moz-range-thumb {

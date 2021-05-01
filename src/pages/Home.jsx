@@ -21,9 +21,19 @@ class Home extends React.Component {
   render() {
     return (
       <div>
-        <div className="ui-back">
-          <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619854345/flashxchanger/ui_back_fjbnj2.svg" alt=""/>
+        <div className="ui-back d-none d-md-block">
+          <img
+            src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619854345/flashxchanger/ui_back_fjbnj2.svg"
+            alt=""
+          />
         </div>
+        <div className="ui-back-mobile d-block d-md-none">
+          <img
+            src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619856250/flashxchanger/ui-back-mobile_jry94p.svg"
+            alt=""
+          />
+        </div>
+
         <div className="container mt-4">
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
@@ -323,7 +333,7 @@ class Home extends React.Component {
             <div class="row justify-content-center">
               <div class="col-md-5">
                 <div
-                  data-aos="fade-right"
+                  data-aos="fade-up"
                   data-aos-duration="1200"
                   class="feature purple-card">
                   <div class="feature-image">
@@ -341,7 +351,7 @@ class Home extends React.Component {
               </div>
               <div class="col-md-5">
                 <div
-                  data-aos="fade-left"
+                  data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="200"
                   class="feature">
@@ -358,7 +368,7 @@ class Home extends React.Component {
               </div>
               <div class="col-md-5">
                 <div
-                  data-aos="fade-right"
+                  data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="400"
                   class="feature">
@@ -375,7 +385,7 @@ class Home extends React.Component {
               </div>
               <div class="col-md-5">
                 <div
-                  data-aos="fade-left"
+                  data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="600"
                   class="feature blue-card">
@@ -392,7 +402,7 @@ class Home extends React.Component {
               </div>
               <div class="col-md-5">
                 <div
-                  data-aos="fade-right"
+                  data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="800"
                   class="feature purple-card">
@@ -408,7 +418,7 @@ class Home extends React.Component {
               </div>
               <div class="col-md-5">
                 <div
-                  data-aos="fade-left"
+                  data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="1000"
                   class="feature">
@@ -570,7 +580,9 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0" onClick={() => this.selectpack("Standard")}>
+                      <span
+                        class="d-block d-md-none select mt-2 mr-0"
+                        onClick={() => this.selectpack("Standard")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -618,7 +630,9 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0"  onClick={() => this.selectpack("Premium")}>
+                      <span
+                        class="d-block d-md-none select mt-2 mr-0"
+                        onClick={() => this.selectpack("Premium")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -666,7 +680,9 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0"  onClick={() => this.selectpack("Gold")}>
+                      <span
+                        class="d-block d-md-none select mt-2 mr-0"
+                        onClick={() => this.selectpack("Gold")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -714,7 +730,9 @@ class Home extends React.Component {
                         class="d-none d-md-block select mt-3 ">
                         Select
                       </span>
-                      <span class="d-block d-md-none select mt-2 mr-0" onClick={() => this.selectpack("Elite")}>
+                      <span
+                        class="d-block d-md-none select mt-2 mr-0"
+                        onClick={() => this.selectpack("Elite")}>
                         <img
                           class="mt-3"
                           src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
@@ -1114,30 +1132,156 @@ class Home extends React.Component {
                 <h2>Start Trading Now</h2>
               </div>
             </div>
-            <div class="row mt-4 justify-content-center">
-              <div class="col-2">
-                <div>
-                  <a
-                    data-aos="fade-down"
-                    data-aos-duration="1200"
-                    target="_blank"
-                    href="/sign-up">
-                    Sign Up
-                  </a>
+
+            <div className="row">
+              <div className="col-sm-12 text-center">
+                <a href="/sign-up">Sign Up</a>
+                <a href="/sign-up" className="trading">
+                  Start Trading
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <section className="footer">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-4">
+                <ul>
+                  <li>
+                    <a target="_blank" href="">
+                      Platform
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      About Us
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Founder
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Announcements
+                    </a>
+                  </li>
+                </ul>
+                <span className="d-block d-md-none">
+                  <img
+                    src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619857968/flashxchanger/line_onnuau.svg"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div className="col-md-4">
+                <ul>
+                  <li>
+                    <a target="_blank" href="">
+                      Term & Conditions
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Privacy policy
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Cookie Policy
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Support
+                    </a>
+                  </li>
+                </ul>
+                <span className="d-block d-md-none">
+                  <img
+                    src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619857968/flashxchanger/line_onnuau.svg"
+                    alt=""
+                  />
+                </span>
+              </div>
+              <div className="col-md-4">
+                <ul>
+                  <li>
+                    <a target="_blank" href="">
+                      API
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Trade API (Public)
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Documentations
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      API (Loged IN)
+                    </a>
+                  </li>
+                  <li>
+                    <a target="_blank" href="">
+                      Currency Details
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+            <div className="row mt-5">
+              <div className="col-sm-2">
+                <div className="text-center">
+                  <img
+                    className="footer-img"
+                    src="https://flashxchanger.com/assets/images/logo.svg"
+                    alt=""
+                  />
                 </div>
               </div>
-              <div class="col-2">
-                <div>
-                  <a
-                    data-aos="fade-down"
-                    data-aos-duration="1200"
-                    data-aos-delay="300"
-                    class="trading"
-                    target="_blank"
-                    href="/start-trading">
-                    Start Trading
-                  </a>
+
+              <div className="col-12 col-md-10">
+                <div className="row socials mt-5 mt-md-0 justify-content-end">
+                  <div className="col-3 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/reddit_rd4uby.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/discord_iurz4w.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/git_duj0ir.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/medium_tqnwnv.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 mt-4 mt-md-0 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/in_ayeut0.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 mt-4 mt-md-0 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/instagram_s9i6s2.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 mt-4 mt-md-0 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/twitter_oyrszp.svg" alt=""/></a>
+                  </div>
+                  <div className="col-3 mt-4 mt-md-0 col-md-1">
+                    <a href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/telegram_zyczcq.svg" alt=""/></a>
+                  </div>
                 </div>
+              </div>
+            </div>
+
+            <div className="row mt-5">
+              <div className="col text-center">
+                <span>2021 © All rights reserved</span>
               </div>
             </div>
           </div>
