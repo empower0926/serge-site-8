@@ -59,34 +59,24 @@ $.ajax({
 	$.ajax({
 	      url: 'https://maximsky.asnoo.com/c/s7315/www/livechart/ajax_curdata.php',
      	      type: 'get',
-              //data: {'action': 'ni_tip', 's': s},
+
               success: function(data, status) {
 					console.log('ajax_getcurdata - ok');
 					var curdata=JSON.parse(data);
-					//alert (curdata[0][3]);
-
-var i=1;
-// alert("i")
-// for (let index = 1; index <4; index++) {
-//   alert(index)
-//  document.getElementsByClassName('chart').html('<canvas id="live_chart_'+index+'" width="100" height="50"></canvas>'); 	;
-
-  
-// }
- $('.chart').each( function () {
-  
-  // document.getElementsByClassName('chart').html('<canvas id="live_chart_'+i+'" width="100" height="50"></canvas>'); 	i=i+1;
-	 $(this).html('<canvas id="live_chart_'+i+'" width="100" height="50"></canvas>'); 	i=i+1;
- });
 
 
-// chart stuff goes here
+
+
+
+
 
 //chart 1
 var ctx1 = document.getElementById('live_chart_1').getContext('2d');
-var chart1 = new Chart(ctx1, {
-	// The type of chart we want to create
-	type: 'line', // also try bar or other graph types
+
+var chart1 = new Chart(ctx1, 
+{
+
+	type: 'line', 
 
 	// The data for our dataset
 	data: {
@@ -141,7 +131,8 @@ var chart1 = new Chart(ctx1, {
 
 //chart 2
 var ctx2 = document.getElementById('live_chart_2').getContext('2d');
-var chart2 = new Chart(ctx2, {
+var chart2 = new Chart(ctx2,
+ {
 	// The type of chart we want to create
 	type: 'line', // also try bar or other graph types
 
@@ -262,22 +253,22 @@ coin_volume[2]=coin_volume[2].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
 
 
-// upd prices
+// // upd prices
 
-$('.col-xl-4 .price').each( function (key,value) {
-	$(this).html('$ '+coin_price[key]);
-});
+// $('.col-xl-4 .price').each( function (key,value) {
+// 	$(this).html('$ '+coin_price[key]);
+// });
 
 
-// upd volume
-$('.coin-data .col-xl-8 span').each( function (key,value) {
-	$(this).html('Volume: '+coin_volume[key]+' USDT');
-});
+// // upd volume
+// $('.coin-data .col-xl-8 span').each( function (key,value) {
+// 	$(this).html('Volume: '+coin_volume[key]+' USDT');
+// });
 
-// upd volume change
-$('.coin-data .col-xl-2 span').each( function (key,value) {
-	$(this).html(''+coin_volume_change[key]+'%');
-});
+// // upd volume change
+// $('.coin-data .col-xl-2 span').each( function (key,value) {
+// 	$(this).html(''+coin_volume_change[key]+'%');
+// });
 
 
 

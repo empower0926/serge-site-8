@@ -89,6 +89,14 @@ section {
   border-radius: 50%;
 }
 
+.chart {
+  height: 200px;
+  text-align: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
 body {
   color: white !important;
   font-family: "Red Hat Display", sans-serif;
