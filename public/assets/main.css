@@ -105,7 +105,7 @@ section {
   position: relative;
   text-align: center;
   line-height: 144px;
-  border-radius: 50%;
+  border-radius: 6px;
   border: 3px solid rgba(255, 255, 255, 0.8);
   -webkit-box-shadow: 2px 2px 6px rgba(101, 2, 126, 0.7), inset 0px -3px 8px rgba(56, 56, 56, 0.4), inset 0px 2px 3px rgba(153, 0, 255, 0.4);
           box-shadow: 2px 2px 6px rgba(101, 2, 126, 0.7), inset 0px -3px 8px rgba(56, 56, 56, 0.4), inset 0px 2px 3px rgba(153, 0, 255, 0.4);
@@ -123,7 +123,7 @@ section {
   position: relative;
   text-align: center;
   line-height: 144px;
-  border-radius: 50%;
+  border-radius: 6px;
   border: 3px solid rgba(255, 255, 255, 0.8);
   box-shadow: 2px 2px 6px rgba(101, 2, 126, 0.7), inset 0px -3px 8px rgba(56, 56, 56, 0.4), inset 0px 2px 3px rgba(153, 0, 255, 0.4);
 }
