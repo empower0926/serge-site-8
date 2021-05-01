@@ -79,12 +79,12 @@ class Home extends React.Component {
                 id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://trade.flashxchanger.com/signInPage">
+                    <a class="nav-link active" aria-current="page" href="https://trade.flashxchanger.com">
                       Sign In
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link sign-up" href="https://trade.flashxchanger.com/signInPage">
+                    <a class="nav-link sign-up" href="https://trade.flashxchanger.com">
                       Sign Up
                     </a>
                   </li>
@@ -1167,7 +1167,7 @@ class Home extends React.Component {
 
             <div className="row">
               <div className="col-sm-12 text-center">
-                <a href="https://trade.flashxchanger.com/signUpPage">Sign Up</a>
+                <a href="https://trade.flashxchanger.com">Sign Up</a>
                 <a href="https://trade.flashxchanger.com/" className="trading">
                   Start Trading
                 </a>
