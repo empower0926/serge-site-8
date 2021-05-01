@@ -1266,7 +1266,7 @@ class Home extends React.Component {
                     <a target="_blank" href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/git_duj0ir.svg" alt=""/></a>
                   </div>
                   <div className="col-3 col-md-1">
-                    <a target="_blank" href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/medium_tqnwnv.svg" alt=""/></a>
+                    <a target="_blank" href="https://blog.flashgroup.io/"><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858530/flashxchanger/medium_tqnwnv.svg" alt=""/></a>
                   </div>
                   <div className="col-3 mt-4 mt-md-0 col-md-1">
                     <a target="_blank" href=""><img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619858528/flashxchanger/in_ayeut0.svg" alt=""/></a>
