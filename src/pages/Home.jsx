@@ -79,10 +79,10 @@ class Home extends React.Component {
                     <span class="coin-name">OZTG/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value">$ 0.137</div>
+                    <div class="coin-value" id="coin-value1">$ 0.137</div>
                   </div>
-                  <span class="usdt">00, 000, 000</span>
-                  <div class="percent">+ 0.00%</div>
+                  <span class="usdt" id="usdt1">00, 000, 000</span>
+                  <div class="percent" id="percent1">+ 0.00%</div>
                   <div class="chart"><canvas id="live_chart_1" ></canvas></div>
                 </div>
               </div>
@@ -98,10 +98,10 @@ class Home extends React.Component {
                     <span class="coin-name">BTC/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value">$ 0.137</div>
+                    <div class="coin-value" id="coin-value2">$ 0.137</div>
                   </div>
-                  <span class="usdt">00, 000, 000</span>
-                  <div class="percent">+ 0.00%</div>
+                  <span class="usdt" id="usdt2">00, 000, 000</span>
+                  <div class="percent" id="percent2">+ 0.00%</div>
                   <div class="chart"><canvas id="live_chart_2" ></canvas></div>
                 </div>
               </div>
@@ -121,10 +121,10 @@ class Home extends React.Component {
                     <span class="coin-name">ETH/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value">$ 0.137</div>
+                    <div class="coin-value" id="coin-value3">$ 0.137</div>
                   </div>
-                  <span class="usdt">00, 000, 000</span>
-                  <div class="percent">+ 0.00%</div>
+                  <span class="usdt" id="usdt3">00, 000, 000</span>
+                  <div class="percent" id="percent3">+ 0.00%</div>
                   <div class="chart"><canvas id="live_chart_3" ></canvas></div>
                 </div>
               </div>

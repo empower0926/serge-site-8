@@ -255,22 +255,15 @@ coin_volume[2]=coin_volume[2].replace(/(\d)(?=(\d\d\d)+(?!\d))/g, "$1,");
 
 // // upd prices
 
-// $('.col-xl-4 .price').each( function (key,value) {
-// 	$(this).html('$ '+coin_price[key]);
-// });
 
+for (let index = 0; index < 3; index++) {
+  let i=index+1;
 
-// // upd volume
-// $('.coin-data .col-xl-8 span').each( function (key,value) {
-// 	$(this).html('Volume: '+coin_volume[key]+' USDT');
-// });
-
-// // upd volume change
-// $('.coin-data .col-xl-2 span').each( function (key,value) {
-// 	$(this).html(''+coin_volume_change[key]+'%');
-// });
-
-
+ document.getElementById('coin-value'+i).innerHTML='$ '+coin_price[index];
+ document.getElementById('usdt'+i).innerHTML=coin_volume[index]+'USDT';
+ document.getElementById('percent'+i).innerHTML=coin_volume_change[index]+'%';
+  
+}
 
 	      },
 	      error: function(xhr, desc, err) {
