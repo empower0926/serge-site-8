@@ -51,6 +51,21 @@ section {
   border: none !important;
 }
 
+.cookie-accept {
+  padding: 2rem;
+  background-color: #000231;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  text-align: left !important;
+}
+
+.cookie-accept button {
+  background-color: #368d9f;
+  color: white;
+  font-weight: bold;
+}
+
 .range-slider {
   -webkit-appearance: none;
   width: 100%;
