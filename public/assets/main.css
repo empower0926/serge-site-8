@@ -41,7 +41,7 @@ section {
 }
 
 .blue-card {
-  background: linear-gradient(206.27deg, #368C9F 15.28%, rgba(42, 66, 141, 0) 68.37%);
+  background: linear-gradient(206.27deg, #368c9f 15.28%, rgba(6, 6, 43, 0.1) 68.37%);
   border-radius: 60px;
   padding: 1rem 0;
 }
@@ -148,13 +148,13 @@ section {
   font-size: 12px !important;
   padding: 4px 0;
   border-radius: 25px;
-  background: -webkit-gradient(linear, left top, right top, from(#3023AE), color-stop(35%, #3023AE), to(#9013FE));
-  background: linear-gradient(90deg, #3023AE 0%, #3023AE 35%, #9013FE 100%);
+  background: -webkit-gradient(linear, left top, right top, from(#3023ae), color-stop(35%, #3023ae), to(#9013fe));
+  background: linear-gradient(90deg, #3023ae 0%, #3023ae 35%, #9013fe 100%);
 }
 
 .percentage {
   color: var(--main-color);
-  font-family: 'Oswald', sans-serif;
+  font-family: "Oswald", sans-serif;
   text-align: center;
   font-size: 36px;
 }
@@ -167,7 +167,11 @@ body {
   color: white !important;
   font-family: "Red Hat Display", sans-serif;
   font-size: 15px;
-  background: linear-gradient(156.2deg, #b158e2 0%, #7367f0 0%, #06062b 28.15%) no-repeat;
+  background-color: #06062b;
+  background-image: url(https://res.cloudinary.com/dmeppscpx/image/upload/v1619854461/flashxchanger/stars_cgnvfk.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
   min-height: 100vh;
 }
 
@@ -225,6 +229,16 @@ nav .sign-up {
     background: none;
     border: none;
   }
+}
+
+.ui-back img {
+  position: absolute;
+  z-index: -999;
+  width: 100%;
+  top: 0;
+  left: 0;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 .top {
@@ -502,6 +516,8 @@ nav .sign-up {
   background-color: #000231;
   border-radius: 28px;
   padding: 2rem;
+  -webkit-box-shadow: 0 1px 15px rgba(1, 1, 1, 0.1);
+          box-shadow: 0 1px 15px rgba(1, 1, 1, 0.1);
 }
 
 .packages .package .package-icon img {

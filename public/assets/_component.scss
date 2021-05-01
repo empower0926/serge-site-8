@@ -20,7 +20,7 @@ h2 {
   }
 }
 
-section{
+section {
   margin-top: 8rem;
   @include screen(small) {
     margin-top: 4rem;
@@ -33,7 +33,11 @@ section{
   padding: 1rem 0;
 }
 .blue-card {
-    background: linear-gradient(206.27deg, #368C9F 15.28%, rgba(42, 66, 141, 0) 68.37%);
+  background: linear-gradient(
+    206.27deg,
+    #368c9f 15.28%,
+    rgba(6, 6, 43, 0.1) 68.37%
+  );
   border-radius: 60px;
   padding: 1rem 0;
 }

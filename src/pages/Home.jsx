@@ -21,6 +21,9 @@ class Home extends React.Component {
   render() {
     return (
       <div>
+        <div className="ui-back">
+          <img src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619854345/flashxchanger/ui_back_fjbnj2.svg" alt=""/>
+        </div>
         <div className="container mt-4">
           <nav class="navbar navbar-expand-lg">
             <div class="container-fluid">
