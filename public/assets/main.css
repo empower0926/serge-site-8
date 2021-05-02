@@ -52,6 +52,7 @@ section {
 }
 
 .cookie-accept {
+  z-index: 999999999 !important;
   padding: 2rem;
   background-color: #000231;
   position: fixed;
@@ -804,6 +805,17 @@ nav .sign-up {
   }
 }
 
+.overlay {
+  -webkit-transition: .3s;
+  transition: .3s;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
+  height: -webkit-fit-content !important;
+  height: -moz-fit-content !important;
+  height: fit-content !important;
+}
+
 #discord-widget {
   display: none !important;
 }
@@ -824,6 +836,11 @@ nav .sign-up {
           animation-duration: 1s;
   -webkit-transform-style: preserve-3d;
           transform-style: preserve-3d;
+}
+
+.discord div:nth-child(1) {
+  width: 0;
+  height: 0;
 }
 
 .discord iframe {

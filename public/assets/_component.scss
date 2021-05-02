@@ -48,6 +48,7 @@ section {
 }
 
 .cookie-accept{
+  z-index: 999999999 !important;
   padding: 2rem;
   background-color: #000231;
   position: fixed;

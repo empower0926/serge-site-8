@@ -74,6 +74,9 @@
       let opened = false;
       function openChat() {
         let chat = document.getElementById("chat");
+        let chatDiv = document.querySelector('.discord');
+        let fDiv = chatDiv.getElementsByTagName('div')[0];
+        fDiv.classList.toggle('overlay');
         chat.style.animationDuration = ".3s";
         chat.style.animationFillMode = "forwards";
         if (opened) {
