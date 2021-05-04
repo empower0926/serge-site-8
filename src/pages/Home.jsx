@@ -474,7 +474,7 @@ class Home extends React.Component {
             <div class="row d-md-none d-block">
               <div class="col-sm-12 mb-2">
                 <h2 data-aos="fade-up" data-aos-duration="1200">
-                  Stable Coin
+                  Asset Pegged Coin
                 </h2>
               </div>
             </div>
