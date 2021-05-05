@@ -12,12 +12,11 @@ class Home extends React.Component {
       this.state = {
         cookieAccept: "",
       };
-    }else{
+    } else {
       this.state = {
         cookieAccept: <Cookie_Accept set={this.setcookie} />,
       };
     }
-   
   }
   setcookie = () => {
     this.setState({ cookieAccept: " " });
@@ -79,12 +78,17 @@ class Home extends React.Component {
                 id="navbarNav">
                 <ul class="navbar-nav">
                   <li class="nav-item">
-                    <a class="nav-link active" aria-current="page" href="https://trade.flashxchanger.com">
+                    <a
+                      class="nav-link active"
+                      aria-current="page"
+                      href="https://trade.flashxchanger.com">
                       Sign In
                     </a>
                   </li>
                   <li class="nav-item">
-                    <a class="nav-link sign-up" href="https://trade.flashxchanger.com">
+                    <a
+                      class="nav-link sign-up"
+                      href="https://trade.flashxchanger.com">
                       Sign Up
                     </a>
                   </li>
@@ -124,7 +128,12 @@ class Home extends React.Component {
                     data-aos="fade-up"
                     data-aos-duration="800"
                     data-aos-delay="1200">
-                    <a class="a-btn" target="_blank" href="https://discord.gg/PrH2uMdKmw">Contact Us</a>
+                    <a
+                      class="a-btn"
+                      target="_blank"
+                      href="https://discord.gg/PrH2uMdKmw">
+                      Contact Us
+                    </a>
                   </div>
                 </div>
               </div>
@@ -325,7 +334,10 @@ class Home extends React.Component {
             <div class="row try">
               <div class="col text-center">
                 <div data-aos="flip-left" data-aos-duration="800">
-                  <a class="a-btn" target="_blank" href="https://trade.flashxchanger.com/">
+                  <a
+                    class="a-btn"
+                    target="_blank"
+                    href="https://trade.flashxchanger.com/">
                     Let’s Try
                   </a>
                 </div>
@@ -485,7 +497,7 @@ class Home extends React.Component {
                     data-aos="zoom-in"
                     data-aos-duration="1200"
                     data-aos-delay="800"
-                    src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619810890/flashxchanger/coin_elements_os4osk.png"
+                    src="https://res.cloudinary.com/dmeppscpx/image/upload/v1620227628/flashxchanger/coin_elements_emwjwp.png"
                     alt=""
                   />
                 </div>
