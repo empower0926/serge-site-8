@@ -7,10 +7,10 @@ class Privacy extends React.Component {
   render() {
     return (
       <div>
-        <div class="rows">
-          <div class="col s10">
+        <div className="rows">
+          <div className="col s10">
             <div>
-              <h1 class="heading2">PRIVACY POLICY</h1>
+              <h1 className="heading2">PRIVACY POLICY</h1>
             </div>
             <p>Effective Date: 17 March 21</p>
 
@@ -41,7 +41,7 @@ class Privacy extends React.Component {
             </span>
             <span>same meanings as in the Terms.</span>
             <span>Please read this Privacy Policy carefully.</span>
-            <h3 class="heading">What is Personal Data?</h3>
+            <h3 className="heading">What is Personal Data?</h3>
             <span>
               This Privacy Policy is governed by and construed in accordance
               with the Estonian Personal Data Protection Act as well as the EU
@@ -56,7 +56,7 @@ class Privacy extends React.Component {
               identifiable natural person, regardless of the form or format in
               which such data exists.
             </span>
-            <h3 class="heading">Personal Data That We Collect</h3>
+            <h3 className="heading">Personal Data That We Collect</h3>
             <span>
               FlashXchanger OZTG OÜ collects personal data if we have reasons to
               do so. For example, we collect personal data, when you:
@@ -129,7 +129,7 @@ class Privacy extends React.Component {
             <span>
               - other information from cookies and similar technologies.
             </span>
-            <h3 class="heading">How and Why We Use Personal Data</h3>
+            <h3 className="heading">How and Why We Use Personal Data</h3>
             <span>
               Personal data will be collected, held, used and disclosed for the
               following purposes jointly and/or severally:
@@ -153,7 +153,7 @@ class Privacy extends React.Component {
               OZTG OÜ
             </span>
             <span>in the circumstances.</span>
-            <h3 class="heading">
+            <h3 className="heading">
               What Are the Legal Grounds for Collecting and Using Personal Data?
             </h3>
             <span>
@@ -188,7 +188,7 @@ class Privacy extends React.Component {
             <span>
               rely on legitimate interests, you have the right to object.
             </span>
-            <h3 class="heading">Minors</h3>
+            <h3 className="heading">Minors</h3>
             <span>
               FlashXchanger OZTG OÜ does not knowingly provide Services and
               collect personal information from anyone under 18 years of age.
@@ -203,7 +203,7 @@ class Privacy extends React.Component {
               minimum age depending on jurisdiction, we will take steps to
               delete the information as soon as possible.
             </span>
-            <h3 class="heading">Sharing your Personal Data</h3>
+            <h3 className="heading">Sharing your Personal Data</h3>
             <span>
               We do not sell our users&rsquo; personal data or share your
               personal data with any third parties except for the purpose of
@@ -247,7 +247,7 @@ class Privacy extends React.Component {
               or individuals
             </span>
             <span>that we do not employ or manage.</span>
-            <h3 class="heading">Sensitive Data</h3>
+            <h3 className="heading">Sensitive Data</h3>
             <span>
               We do not collect or request your sensitive data (including, but
               not limited to, information about your religious or political
@@ -264,7 +264,7 @@ class Privacy extends React.Component {
               you would
             </span>
             <span>not want to be publicly available.</span>
-            <h3 class="heading">
+            <h3 className="heading">
               Users&rsquo; Rights in relation to its Personal Data
             </h3>
             <span>
@@ -289,7 +289,7 @@ class Privacy extends React.Component {
               - ask not to use your personal data for marketing purposes;
             </span>
             <span>- access information we hold about you.</span>
-            <h3 class="heading">Security of Personal Data</h3>
+            <h3 className="heading">Security of Personal Data</h3>
             <span>
               We use certain technologies to ensure the confidentiality of your
               personal data. FlashXchanger OZTG OÜ uses several security
@@ -309,7 +309,7 @@ class Privacy extends React.Component {
               acceptable means to protect your personal data, we cannot
               guarantee absolute security of your personal data.
             </span>
-            <h3 class="heading">Data Retention</h3>
+            <h3 className="heading">Data Retention</h3>
             <span>
               We process information both inside and outside of the European
               Union and European Economic Area and rely on legally-provided
@@ -346,7 +346,7 @@ class Privacy extends React.Component {
               Retention periods may be changed from time to time based on
               regulatory requirements.
             </span>
-            <h3 class="heading">Communications</h3>
+            <h3 className="heading">Communications</h3>
             <span>
               The email notifications sent by FlashXchanger OZTG OÜ are of two
               types:
@@ -379,7 +379,7 @@ class Privacy extends React.Component {
               information
             </span>
             <span>use only.</span>
-            <h3 class="heading">Changes to the Privacy Policy</h3>
+            <h3 className="heading">Changes to the Privacy Policy</h3>
             <span>
               We may change this Privacy Policy from time to time. As soon as
               the Privacy Policy is updated, FlashXchanger OZTG OÜ will post an
@@ -394,7 +394,7 @@ class Privacy extends React.Component {
               will send you an email notification to alert you about such
               changes.
             </span>
-            <h3 class="heading">Data Controller Person</h3>
+            <h3 className="heading">Data Controller Person</h3>
             <span>
               To communicate with our Data Protection Officer, please contact us
               at dpo@flashxchanger.com. Please put &ldquo;DPO&rdquo; in the

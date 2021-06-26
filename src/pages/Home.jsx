@@ -1,6 +1,8 @@
 import React, { Component } from "react";
 import Cookies from "universal-cookie";
 import Cookie_Accept from "./cookie_accept_panel";
+const Chart = require('chart.js');
+
 const cookies = new Cookies();
 
 const nextYear = new Date();
@@ -50,23 +52,23 @@ class Home extends React.Component {
         </div>
 
         <div className="container mt-4">
-          <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid">
-              <a class="navbar-brand" href="#">
+          <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid">
+              <a className="navbar-brand" href="#">
                 <img
                   src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619891536/flashxchanger/logo_zbnr8l.svg"
                   alt=""
                 />
               </a>
               <button
-                class="navbar-toggler"
+                className="navbar-toggler"
                 type="button"
                 data-bs-toggle="collapse"
                 data-bs-target="#navbarNav"
                 aria-controls="navbarNav"
                 aria-expanded="false"
                 aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon">
+                <span className="navbar-toggler-icon">
                   <img
                     src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619851175/flashxchanger/menu_icon_pniof7.svg"
                     alt=""
@@ -74,20 +76,20 @@ class Home extends React.Component {
                 </span>
               </button>
               <div
-                class="collapse navbar-collapse justify-content-end"
+                className="collapse navbar-collapse justify-content-end"
                 id="navbarNav">
-                <ul class="navbar-nav">
-                  <li class="nav-item">
+                <ul className="navbar-nav">
+                  <li className="nav-item">
                     <a
-                      class="nav-link active"
+                      className="nav-link active"
                       aria-current="page"
                       href="https://trade.flashxchanger.com">
                       Sign In
                     </a>
                   </li>
-                  <li class="nav-item">
+                  <li className="nav-item">
                     <a
-                      class="nav-link sign-up"
+                      className="nav-link sign-up"
                       href="https://trade.flashxchanger.com">
                       Sign Up
                     </a>
@@ -98,12 +100,12 @@ class Home extends React.Component {
           </nav>
         </div>
 
-        <section class="top">
+        <section className="top">
           <div className="bg"></div>
-          <div class="container">
-            <div class="row justify-content-center">
-              <div class="col-md-8">
-                <div class="intro">
+          <div className="container">
+            <div className="row justify-content-center">
+              <div className="col-md-8">
+                <div className="intro">
                   <div data-aos="fade-down" data-aos-duration="1200">
                     See the ads you need
                   </div>
@@ -115,12 +117,12 @@ class Home extends React.Component {
                   </div>
                 </div>
 
-                <div class="contact-us">
+                <div className="contact-us">
                   <div
                     data-aos="fade-up"
                     data-aos-duration="800"
                     data-aos-delay="800"
-                    class="contact-intro">
+                    className="contact-intro">
                     Any question? Reach out to us and we’ll get back to you
                     shortly.
                   </div>
@@ -129,7 +131,7 @@ class Home extends React.Component {
                     data-aos-duration="800"
                     data-aos-delay="1200">
                     <a
-                      class="a-btn"
+                      className="a-btn"
                       target="_blank"
                       href="https://discord.gg/PrH2uMdKmw">
                       Contact Us
@@ -141,94 +143,97 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section class="coin-details">
-          <div class="container">
-            <div class="row ">
-              <div class="col-md-4 ">
+        <section className="coin-details">
+          <div className="container">
+            <div className="row ">
+              <div className="col-md-4 ">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="200"
-                  class="coin">
-                  <div class="coin-data">
-                    <span class="coin-image">
+                  className="coin">
+                  <div className="coin-data">
+                    <span className="coin-image">
                       <img
                         src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619874803/flashxchanger/OZTG_vwr5kt.svg"
                         alt=""
                       />
                     </span>
-                    <span class="coin-name">OZTG/USDT</span>
+                    <span className="coin-name">OZTG/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value" id="coin-value1">
+                    <div className="coin-value" id="coin-value1">
                       $ 0.137
                     </div>
                   </div>
-                  <span class="usdt" id="usdt1">
+                  <span className="usdt" id="usdt1">
                     00, 000, 000
                   </span>
-                  <div class="percent" id="percent1">
+                  <div className="percent" id="percent1">
                     + 0.00%
                   </div>
-                  <div class="chart">
+                  <div className="chart">
                     <canvas id="live_chart_1"></canvas>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
-                <div data-aos="fade-up" data-aos-duration="1200" class="coin">
-                  <div class="coin-data">
-                    <span class="coin-image">
+              <div className="col-md-4">
+                <div
+                  data-aos="fade-up"
+                  data-aos-duration="1200"
+                  className="coin">
+                  <div className="coin-data">
+                    <span className="coin-image">
                       <img
                         src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619874803/flashxchanger/BTC_ahcpqq.svg"
                         alt=""
                       />
                     </span>
-                    <span class="coin-name">BTC/USDT</span>
+                    <span className="coin-name">BTC/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value" id="coin-value2">
+                    <div className="coin-value" id="coin-value2">
                       $ 0.137
                     </div>
                   </div>
-                  <span class="usdt" id="usdt2">
+                  <span className="usdt" id="usdt2">
                     00, 000, 000
                   </span>
-                  <div class="percent" id="percent2">
+                  <div className="percent" id="percent2">
                     + 0.00%
                   </div>
-                  <div class="chart">
+                  <div className="chart">
                     <canvas id="live_chart_2"></canvas>
                   </div>
                 </div>
               </div>
-              <div class="col-md-4">
+              <div className="col-md-4">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="200"
-                  class="coin">
-                  <div class="coin-data">
-                    <span class="coin-image">
+                  className="coin">
+                  <div className="coin-data">
+                    <span className="coin-image">
                       <img
                         src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619874803/flashxchanger/ETH_pwcvls.svg"
                         alt=""
                       />
                     </span>
-                    <span class="coin-name">ETH/USDT</span>
+                    <span className="coin-name">ETH/USDT</span>
                   </div>
                   <div>
-                    <div class="coin-value" id="coin-value3">
+                    <div className="coin-value" id="coin-value3">
                       $ 0.137
                     </div>
                   </div>
-                  <span class="usdt" id="usdt3">
+                  <span className="usdt" id="usdt3">
                     00, 000, 000
                   </span>
-                  <div class="percent" id="percent3">
+                  <div className="percent" id="percent3">
                     + 0.00%
                   </div>
-                  <div class="chart">
+                  <div className="chart">
                     <canvas id="live_chart_3"></canvas>
                   </div>
                 </div>
@@ -237,32 +242,32 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section class="why">
-          <div class="container">
-            <div class="row">
-              <div class="col-md-12">
+        <section className="why">
+          <div className="container">
+            <div className="row">
+              <div className="col-md-12">
                 <h2 data-aos="fade-up" data-aos-duration="1200">
                   Why is FlashXChanger Different?
                 </h2>
               </div>
             </div>
 
-            <div class="row">
-              <div class="col-md-6">
+            <div className="row">
+              <div className="col-md-6">
                 <div
                   data-aos="zoom-in"
                   data-aos-duration="1200"
                   data-aos-delay="900"
-                  class="pie">
+                  className="pie">
                   <img
                     src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619811322/flashxchanger/pie_qibdeq.png"
                     alt=""
                   />
                 </div>
               </div>
-              <div class="col-md-6 points">
-                <div class="row point">
-                  <div class="col-2">
+              <div className="col-md-6 points">
+                <div className="row point">
+                  <div className="col-2">
                     <div
                       data-aos="zoom-in"
                       data-aos-duration="600"
@@ -273,7 +278,7 @@ class Home extends React.Component {
                       />
                     </div>
                   </div>
-                  <div class="col-10">
+                  <div className="col-10">
                     <div
                       data-aos="fade-up"
                       data-aos-duration="800"
@@ -283,8 +288,8 @@ class Home extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div class="row point">
-                  <div class="col-2">
+                <div className="row point">
+                  <div className="col-2">
                     <div
                       data-aos="zoom-in"
                       data-aos-duration="600"
@@ -295,7 +300,7 @@ class Home extends React.Component {
                       />
                     </div>
                   </div>
-                  <div class="col-10">
+                  <div className="col-10">
                     <div
                       data-aos="fade-up"
                       data-aos-duration="800"
@@ -306,8 +311,8 @@ class Home extends React.Component {
                     </div>
                   </div>
                 </div>
-                <div class="row point">
-                  <div class="col-2">
+                <div className="row point">
+                  <div className="col-2">
                     <div
                       data-aos="zoom-in"
                       data-aos-duration="600"
@@ -318,7 +323,7 @@ class Home extends React.Component {
                       />
                     </div>
                   </div>
-                  <div class="col-10">
+                  <div className="col-10">
                     <div
                       data-aos="fade-up"
                       data-aos-duration="800"
@@ -331,11 +336,11 @@ class Home extends React.Component {
               </div>
             </div>
 
-            <div class="row try">
-              <div class="col text-center">
+            <div className="row try">
+              <div className="col text-center">
                 <div data-aos="flip-left" data-aos-duration="800">
                   <a
-                    class="a-btn"
+                    className="a-btn"
                     target="_blank"
                     href="https://trade.flashxchanger.com/">
                     Let’s Try
@@ -346,30 +351,30 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section class="features-desktop">
-          <div class="container">
-            <div class="row">
-              <div class="col">
+        <section className="features-desktop">
+          <div className="container">
+            <div className="row">
+              <div className="col">
                 <h2 data-aos="fade-up" data-aos-duration="1200">
                   Flash Platform Features
                 </h2>
               </div>
             </div>
 
-            <div class="row justify-content-center">
-              <div class="col-md-5">
+            <div className="row justify-content-center">
+              <div className="col-md-5">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
-                  class="feature purple-card">
-                  <div class="feature-image">
+                  className="feature purple-card">
+                  <div className="feature-image">
                     <img
                       src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_01_w9f3fi.svg"
                       alt=""
                     />
                   </div>
-                  <div class="feature-name">Exchange</div>
-                  <div class="feature-desc">
+                  <div className="feature-name">Exchange</div>
+                  <div className="feature-desc">
                     Flash offers the most liquid order book in his segment of
                     "tangible asset based exchange". Users can usually exchange
                     asset-pegged / Backed and any Coin with a value link to a
@@ -378,99 +383,99 @@ class Home extends React.Component {
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div className="col-md-5">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="200"
-                  class="feature">
-                  <div class="feature-image">
+                  className="feature">
+                  <div className="feature-image">
                     <img
                       src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_02_reqluw.svg"
                       alt=""
                     />
                   </div>
-                  <div class="feature-name">Order Types</div>
-                  <div class="feature-desc">
+                  <div className="feature-name">Order Types</div>
+                  <div className="feature-desc">
                     Flash offers a suite of order types to give traders the
                     tools they need for every scenario. Discover more about our
                     most advanced Algoritmic orders types.
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div className="col-md-5">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="400"
-                  class="feature">
-                  <div class="feature-image">
+                  className="feature">
+                  <div className="feature-image">
                     <img
                       src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_03_kgsigt.svg"
                       alt=""
                     />
                   </div>
-                  <div class="feature-name">Customizable Interface</div>
-                  <div class="feature-desc">
+                  <div className="feature-name">Customizable Interface</div>
+                  <div className="feature-desc">
                     Organize your workspace according to your needs: Compose
                     your layout, choose between themes, set up notifications and
                     data preferences.
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div className="col-md-5">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="600"
-                  class="feature blue-card">
-                  <div class="feature-image">
+                  className="feature blue-card">
+                  <div className="feature-image">
                     <img
                       src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_04_umfzsv.svg"
                       alt=""
                     />
                   </div>
-                  <div class="feature-name">Security</div>
-                  <div class="feature-desc">
+                  <div className="feature-name">Security</div>
+                  <div className="feature-desc">
                     Security of user information and funds is our first
                     priority. Contact us to know more about our security
                     features and integrations.
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div className="col-md-5">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="800"
-                  class="feature purple-card">
-                  <div class="feature-image">
+                  className="feature purple-card">
+                  <div className="feature-image">
                     <img
                       src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_05_fexxzj.svg"
                       alt=""
                     />
                   </div>
-                  <div class="feature-name">Community</div>
-                  <div class="feature-desc">
+                  <div className="feature-name">Community</div>
+                  <div className="feature-desc">
                     Join our Growing global community that believes in the power
                     of Cryptocurrency link to tangible asset.
                   </div>
                 </div>
               </div>
-              <div class="col-md-5">
+              <div className="col-md-5">
                 <div
                   data-aos="fade-up"
                   data-aos-duration="1200"
                   data-aos-delay="1000"
-                  class="feature">
-                  <div class="feature-image">
+                  className="feature">
+                  <div className="feature-image">
                     <img
                       src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619861441/flashxchanger/feature_06_mpywbk.svg"
                       alt=""
                     />
                   </div>
-                  <div class="feature-name">Industry Leading API</div>
-                  <div class="feature-desc">
+                  <div className="feature-name">Industry Leading API</div>
+                  <div className="feature-desc">
                     Our websocket feed lets you easily gain access to real-time
                     market data, while our trading API lets you develop secure,
                     programmatic trading bots.
@@ -481,17 +486,17 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section class="stable-coin">
-          <div class="container">
-            <div class="row d-md-none d-block">
-              <div class="col-sm-12 mb-2">
+        <section className="stable-coin">
+          <div className="container">
+            <div className="row d-md-none d-block">
+              <div className="col-sm-12 mb-2">
                 <h2 data-aos="fade-up" data-aos-duration="1200">
                   Asset Pegged Coin
                 </h2>
               </div>
             </div>
-            <div class="row stable-coin-image-mobile d-block d-md-none">
-              <div class="col-md-12">
+            <div className="row stable-coin-image-mobile d-block d-md-none">
+              <div className="col-md-12">
                 <div>
                   <img
                     data-aos="zoom-in"
@@ -504,17 +509,17 @@ class Home extends React.Component {
               </div>
             </div>
 
-            <div class="row justify-content-center">
-              <div class="col-md-6 my-auto">
-                <div class="row d-md-block d-none">
-                  <div class="col-sm-12 mb-2">
+            <div className="row justify-content-center">
+              <div className="col-md-6 my-auto">
+                <div className="row d-md-block d-none">
+                  <div className="col-sm-12 mb-2">
                     <h2 data-aos="fade-down" data-aos-duration="1200">
                       Stable Coin
                     </h2>
                   </div>
                 </div>
-                <div class="point row">
-                  <span class="col-2">
+                <div className="point row">
+                  <span className="col-2">
                     <img
                       data-aos="zoom-in"
                       data-aos-duration="1200"
@@ -524,7 +529,7 @@ class Home extends React.Component {
                     />
                   </span>
                   <span
-                    class="col-10"
+                    className="col-10"
                     data-aos="fade-up"
                     data-aos-duration="1200"
                     data-aos-delay="200">
@@ -533,8 +538,8 @@ class Home extends React.Component {
                     metric (therefore linked indirectly with gold collateral).
                   </span>
                 </div>
-                <div class="point row mt-5">
-                  <span class="col-2">
+                <div className="point row mt-5">
+                  <span className="col-2">
                     <img
                       data-aos="zoom-in"
                       data-aos-duration="1200"
@@ -544,7 +549,7 @@ class Home extends React.Component {
                     />
                   </span>
                   <span
-                    class="col-10"
+                    className="col-10"
                     data-aos="fade-up"
                     data-aos-duration="1200"
                     data-aos-delay="600">
@@ -555,7 +560,7 @@ class Home extends React.Component {
                 </div>
               </div>
 
-              <div class="col-md-6 stable-coin-image-desktop d-none d-md-block">
+              <div className="col-md-6 stable-coin-image-desktop d-none d-md-block">
                 <div>
                   <img
                     data-aos="zoom-in"
@@ -570,259 +575,16 @@ class Home extends React.Component {
           </div>
         </section>
 
-        {/* <section class="packages">
-          <div class="container">
-            <div class="row">
-              <div class="col-12 intro">
-                <div>
-                  <h2 data-aos="fade-up" data-aos-duration="1200">
-                    OZTG Package
-                  </h2>
-                </div>
-                <div
-                  data-aos="fade-up"
-                  data-aos-duration="1200"
-                  data-aos-delay="300">
-                  Select OZTG Package
-                </div>
-              </div>
-            </div>
-
-            <div class="row">
-              <div class="col-md-3">
-                <div
-                  data-aos="fade-up"
-                  id="Standard"
-                  data-aos-duration="1200"
-                  class="package">
-                  <div class="row">
-                    <div class="col-6 d-flex col-md-12">
-                      <span class="package-icon">
-                        <img
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619815101/flashxchanger/standard_icon_xbsdfb.svg"
-                          alt=""
-                        />
-                      </span>
-
-                      <span class="package-name">Standard</span>
-                    </div>
-
-                    <div class="col-6 col-md-12 package-value">
-                      <span class="number">5,000</span>
-                    </div>
-                  </div>
-
-                  <div class="row mt-2">
-                    <span class="rate col-4 col-md-12 yearprofit ">
-                      869.31%
-                    </span>
-                    <span class="rate col-6 col-md-12 price">0.137</span>
-
-                    <span class="col-2 col-md-12 p-0 select-btn">
-                      <span
-                        onClick={() => this.selectpack("Standard")}
-                        class="d-none d-md-block select mt-3">
-                        Select
-                      </span>
-                      <span
-                        class="d-block d-md-none select mt-2 mr-0"
-                        onClick={() => this.selectpack("Standard")}>
-                        <img
-                          class="mt-3"
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
-                          alt=""
-                        />
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div
-                  data-aos="fade-up"
-                  id="Premium"
-                  data-aos-duration="1200"
-                  data-aos-delay="200"
-                  class="package">
-                  <div class="row">
-                    <div class="col-6 d-flex col-md-12">
-                      <span class="package-icon">
-                        <img
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619815101/flashxchanger/premium_icon_c63fu5.svg"
-                          alt=""
-                        />
-                      </span>
-
-                      <span class="package-name">Premium</span>
-                    </div>
-
-                    <div class="col-6 col-md-12 package-value">
-                      <span class="number">25,000</span>
-                    </div>
-                  </div>
-
-                  <div class="row mt-2">
-                    <span class="rate col-4 col-md-12 yearprofit ">
-                      874.06%
-                    </span>
-                    <span class="rate col-6 col-md-12 price">0.137</span>
-
-                    <span class="col-2 col-md-12 p-0 select-btn">
-                      <span
-                        onClick={() => this.selectpack("Premium")}
-                        class="d-none d-md-block select mt-3">
-                        Select
-                      </span>
-                      <span
-                        class="d-block d-md-none select mt-2 mr-0"
-                        onClick={() => this.selectpack("Premium")}>
-                        <img
-                          class="mt-3"
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
-                          alt=""
-                        />
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div
-                  data-aos="fade-up"
-                  id="Gold"
-                  data-aos-duration="1200"
-                  data-aos-delay="400"
-                  class="package">
-                  <div class="row">
-                    <div class="col-6 d-flex col-md-12">
-                      <span class="package-icon">
-                        <img
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619815101/flashxchanger/gold_icon_qcwaas.svg"
-                          alt=""
-                        />
-                      </span>
-
-                      <span class="package-name">Gold</span>
-                    </div>
-
-                    <div class="col-6 col-md-12 package-value">
-                      <span class="number">100,000</span>
-                    </div>
-                  </div>
-
-                  <div class="row mt-2">
-                    <span class="rate col-4 col-md-12 yearprofit ">
-                      885.91%
-                    </span>
-                    <span class="rate col-6 col-md-12 price">0.137</span>
-
-                    <span class="col-2 col-md-12 p-0 select-btn">
-                      <span
-                        onClick={() => this.selectpack("Gold")}
-                        class="d-none d-md-block select mt-3">
-                        Select
-                      </span>
-                      <span
-                        class="d-block d-md-none select mt-2 mr-0"
-                        onClick={() => this.selectpack("Gold")}>
-                        <img
-                          class="mt-3"
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
-                          alt=""
-                        />
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="col-md-3">
-                <div
-                  data-aos="fade-up"
-                  id="Elite"
-                  data-aos-duration="1200"
-                  data-aos-delay="600"
-                  class="package">
-                  <div class="row">
-                    <div class="col-6 d-flex col-md-12">
-                      <span class="package-icon">
-                        <img
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619815101/flashxchanger/elite_icon_lvbgnb.svg"
-                          alt=""
-                        />
-                      </span>
-
-                      <span class="package-name">Elite</span>
-                    </div>
-
-                    <div class="col-6 col-md-12 package-value">
-                      <span class="number">500,000</span>
-                    </div>
-                  </div>
-
-                  <div class="row mt-2">
-                    <span class="rate col-4 col-md-12 yearprofit ">
-                      902.50%
-                    </span>
-                    <span class="rate col-6 col-md-12 price">0.137</span>
-
-                    <span class="col-2 col-md-12 p-0 select-btn">
-                      <span
-                        onClick={() => this.selectpack("Elite")}
-                        class="d-none d-md-block select mt-3 ">
-                        Select
-                      </span>
-                      <span
-                        class="d-block d-md-none select mt-2 mr-0"
-                        onClick={() => this.selectpack("Elite")}>
-                        <img
-                          class="mt-3"
-                          src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619814212/flashxchanger/select_braxnn.svg"
-                          alt=""
-                        />
-                      </span>
-                    </span>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section> */}
-        {/* 
-        <section class="range mt-5 mb-3">
-          <div class="container">
-            <div class="row">
-              <div class="col-xl-12">
-                <h6 class="mobile-center">Future OZTG Price</h6>
-              </div>
-              <div class="col-sm-12 mt-4 range-wrap">
-                <input
-                  id="range"
-                  name="range"
-                  class="range range-slider"
-                  step="0.001"
-                  type="range"
-                  min="0.137"
-                  max="1"
-                />
-                <output class="bubble"></output>
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        <section class="trade">
-          <div class="container">
-            <div class="row">
+        <section className="trade">
+          <div className="container">
+            <div className="row">
               <div data-aos="fade-up" data-aos-duration="1200">
-                <h2 class="d-block d-md-none h-moblie">Trade on the Go</h2>
+                <h2 className="d-block d-md-none h-moblie">Trade on the Go</h2>
               </div>
             </div>
-            <div class="row">
-              <div class="col-md-6 d-flex justify-content-center">
-                <div class="my-auto">
+            <div className="row">
+              <div className="col-md-6 d-flex justify-content-center">
+                <div className="my-auto">
                   <img
                     src="https://res.cloudinary.com/dmeppscpx/image/upload/v1619818602/flashxchanger/trade-on-the-go_plzjto.png"
                     alt=""
@@ -830,12 +592,12 @@ class Home extends React.Component {
                 </div>
               </div>
 
-              <div class="col-md-6 d-flex">
-                <div class="trade-desc my-auto">
+              <div className="col-md-6 d-flex">
+                <div className="trade-desc my-auto">
                   <h2
                     data-aos="fade-up"
                     data-aos-duration="1200"
-                    class="d-none d-md-block">
+                    className="d-none d-md-block">
                     Trade on the Go
                   </h2>
                   <div
@@ -847,12 +609,12 @@ class Home extends React.Component {
                     power of Flash cryptocurrency exchange in the palm of your
                     hand.
                   </div>
-                  <div class="mt-3">
+                  <div className="mt-3">
                     <a
                       data-aos="zoom-in"
                       data-aos-duration="1200"
                       data-aos-delay="800"
-                      class="a-btn"
+                      className="a-btn"
                       target="_blank"
                       href="https://trade.flashxchanger.com/">
                       Let’s Try
@@ -864,9 +626,9 @@ class Home extends React.Component {
           </div>
         </section>
 
-        <section class="start-now">
-          <div class="container">
-            <div class="row">
+        <section className="start-now">
+          <div className="container">
+            <div className="row">
               <div>
                 <h2>Start Trading Now</h2>
               </div>
@@ -1117,6 +879,74 @@ class Home extends React.Component {
       // Sorta magic numbers based on size of the native UI thumb
       bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
     }
+
+    const coinTags = document.querySelectorAll(".coin-value");
+    const oztgPriceTag = coinTags[0];
+    const btcPriceTag = coinTags[1];
+    const ethPriceTag = coinTags[2];
+
+    const oztgVolumeTag = document.querySelector('#usdt1'); 
+    const btcVolumeTag = document.querySelector('#usdt2'); 
+    const ethVolumeTag = document.querySelector('#usdt3'); 
+
+    const coinsURL =
+      "https://trade.flashxchanger.com/graphql?query={markets{id%20name%20ticker{last%20volume}}}";
+
+    const ethData = [];
+    const oztgData = [];
+    const btcData = [];
+
+    const oztgCanvas = document.querySelector("#live_chart_1");
+    const btcCanvas = document.querySelector("#live_chart_2");
+    const ethCanvas = document.querySelector("#live_chart_3");
+
+    setInterval(() => {
+      fetch(coinsURL)
+        .then((response) => response.json())
+        .then((result) => {
+          const markets = result.data.markets;
+
+          const ethPrice = markets[0].ticker.last;
+          const oztgPrice = markets[1].ticker.last;
+          const btcPrice = markets[2].ticker.last;
+          
+          const ethVolume = markets[0].ticker.volume;
+          const oztgVolume = markets[1].ticker.volume;
+          const btcVolume = markets[2].ticker.volume;
+
+          ethVolumeTag.innerHTML = ethVolume;
+          oztgVolumeTag.innerHTML = oztgVolume;
+          btcVolumeTag.innerHTML = btcVolume;
+          
+          console.log(markets[0].ticker.volume);
+
+          if (oztgData.length >= 5) {
+            oztgData.shift();
+          }
+          if (ethData.length >= 5) {
+            ethData.shift();
+          }
+          if (btcData.length >= 5) {
+            btcData.shift();
+          }
+
+          oztgData.push(oztgPrice);
+          ethData.push(ethPrice);
+          btcData.push(btcPrice);
+
+          oztgPriceTag.innerHTML = `$ ${oztgPrice}`;
+          btcPriceTag.innerHTML = `$ ${btcPrice}`;
+          ethPriceTag.innerHTML = `$ ${ethPrice}`;
+
+
+          // chart work
+          // let oztgCTX = oztgCanvas.getContext("2d");
+          // let ethCTX = ethCanvas.getContext("2d");
+          // let btcCTX = btcCanvas.getContext("2d");
+
+          // let oztgChart = new Chart(oztgCTX, {});
+        });
+    }, 5000);
   }
 }
 export default Home;

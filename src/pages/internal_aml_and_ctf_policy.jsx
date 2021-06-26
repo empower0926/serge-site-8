@@ -7,8 +7,8 @@ class AML extends React.Component {
   render() {
     return (
       <div>
-        <div class="rows aml">
-          <div class="col s10">
+        <div className="rows aml">
+          <div className="col s10">
             <div>
               <h1>INTERNAL AML AND CTF POLICY</h1>
             </div>
@@ -35,12 +35,12 @@ class AML extends React.Component {
               designed to comply with legislation, regulations and any other
               policies.
             </span>
-            <h3 class="heading">
+            <h3 className="heading">
               Definition of money laundering and terrorist financing
             </h3>
             <span>
               <span>
-                &lsquo;<span class="h5class">Money laundering</span>&rsquo;
+                &lsquo;<span className="h5class">Money laundering</span>&rsquo;
               </span>{" "}
               means:
             </span>
@@ -84,7 +84,7 @@ class AML extends React.Component {
             </span>
             <span>
               <span>
-                <span class="h5class">&lsquo;Terrorist financing&rsquo;</span>
+                <span className="h5class">&lsquo;Terrorist financing&rsquo;</span>
               </span>{" "}
               means the financing and supporting of an act of terrorism and
               commissioning thereof within the meaning of &sect; 2373 of
@@ -92,7 +92,7 @@ class AML extends React.Component {
             <span>the Penal Code of Estonia.</span>
             <span>
               <span>
-                <span class="h5class">
+                <span className="h5class">
                   &lsquo;Politically exposed persons&rsquo;
                 </span>
               </span>{" "}
@@ -130,7 +130,7 @@ class AML extends React.Component {
             </span>
             <span>Economic Area or an institution of the European Union.</span>
             <span>
-              <span class="h5class">&lsquo;Beneficial owner&rsquo;</span>
+              <span className="h5class">&lsquo;Beneficial owner&rsquo;</span>
             </span>{" "}
             <span>
               means a natural person who, by exploiting his or her influence,
@@ -152,7 +152,7 @@ class AML extends React.Component {
             </span>
             <span>
               <span>
-                <span class="h5class">&lsquo;Beneficial owner&rsquo;</span>
+                <span className="h5class">&lsquo;Beneficial owner&rsquo;</span>
               </span>{" "}
               means a natural person who, by exploiting his or her influence,
               uses a transaction or transaction, or otherwise controls the
@@ -173,7 +173,7 @@ class AML extends React.Component {
             </span>
             <span>
               <span>
-                <span class="h5class">&lsquo;Direct ownership&rsquo;</span>
+                <span className="h5class">&lsquo;Direct ownership&rsquo;</span>
               </span>{" "}
               is the way in which a natural person holds a 25% stake in a
               company, plus one share or more than 25% of ownership.
@@ -199,7 +199,7 @@ class AML extends React.Component {
             <span>financing.</span>
             <span>
               <span>
-                <span class="h5class">&lsquo;Business relationship&rsquo;</span>
+                <span className="h5class">&lsquo;Business relationship&rsquo;</span>
               </span>{" "}
               means the relationship between FlashXchanger OZTG OÜ and customer
               resulting from the conclusion of a durability
@@ -212,7 +212,7 @@ class AML extends React.Component {
             <span>employment.</span>
             <span>
               <span>
-                <span class="h5class">&lsquo;Customer&rsquo;</span>
+                <span className="h5class">&lsquo;Customer&rsquo;</span>
               </span>{" "}
               means a person who uses or has used one or more services offered
               by FlashXchanger OZTG OÜ and is identified by FlashXchanger OZTG
@@ -221,14 +221,14 @@ class AML extends React.Component {
             <span>employee or service provider.</span>
             <span>
               <span>
-                <span class="h5class">&lsquo;Employee&rsquo;</span>
+                <span className="h5class">&lsquo;Employee&rsquo;</span>
               </span>{" "}
               means a person who works in FlashXchanger OZTG OÜ and is
               responsible for the execution of a specific transaction.
             </span>
             <span>
               <span>
-                <span class="h5class">
+                <span className="h5class">
                   &lsquo;Financial Intelligence Unit&rsquo;
                 </span>
               </span>{" "}
@@ -241,7 +241,7 @@ class AML extends React.Component {
               Tallinn; e-mail
             </span>
             <span>rahapesu@politsei.ee</span>
-            <h3 class="heading">Scope and objectives of the policy</h3>
+            <h3 className="heading">Scope and objectives of the policy</h3>
             <span>
               This Policy applies to all employees, all functions, all units in
               FlashXchanger OZTG OÜ. The aim of FlashXchanger OZTG OÜ is to
@@ -301,7 +301,7 @@ class AML extends React.Component {
             </span>
             <span>
               the Financial Intelligence Unit at{" "}
-              <span class="custom_color">
+              <span className="custom_color">
                 https://www.politsei.ee/en/organisatsioon/rahapesu/index.dot.{" "}
               </span>
             </span>
@@ -323,7 +323,7 @@ class AML extends React.Component {
               Financing Prevention Act pursuant to the procedure provided by
               law.
             </span>
-            <h3 class="heading">Reporting to Financial Intelligence Unit</h3>
+            <h3 className="heading">Reporting to Financial Intelligence Unit</h3>
             <span>
               FlashXchanger OZTG OÜ is obliged to report to the Financial
               Intelligence Unit in the event of suspicion of money laundering or
@@ -373,20 +373,20 @@ class AML extends React.Component {
               located at:
             </span>
             <span>
-              <span class="custom_color">
+              <span className="custom_color">
                 https://www.riigiteataja.ee/tolkelisa/5240/9201/4022/a2.pdf#
               </span>
             </span>
             <span>
               It is preferred to send the message encrypted by e-mail to:{" "}
-              <span class="custom_color">rahapesu@politsei.ee</span>
+              <span className="custom_color">rahapesu@politsei.ee</span>
             </span>
             <span>
               At the first request of the Financial Intelligence Unit,
               FlashXchanger OZTG OÜ contact person will send all necessary
               documents and information.
             </span>
-            <h3 class="heading">Risk assessment</h3>
+            <h3 className="heading">Risk assessment</h3>
             <span>
               FlashXchanger OZTG OÜ is committed to identify and assess any
               money laundering or terrorist financing risks as well as to
@@ -420,7 +420,7 @@ class AML extends React.Component {
               in risk assessment forms and assess potential risks based on this
               Policy.
             </span>
-            <h3 class="heading">Governance</h3>
+            <h3 className="heading">Governance</h3>
             <span>
               The management board of FlashXchanger OZTG OÜ has instructed
               FlashXchanger OZTG OÜ CEO to develop and implement this Policy to
@@ -445,7 +445,7 @@ class AML extends React.Component {
               shall ensure that the service provider will comply with this
               Policy.
             </span>
-            <h3 class="heading">Risk tolerance</h3>
+            <h3 className="heading">Risk tolerance</h3>
             <span>
               FlashXchanger OZTG OÜ does not accept any breach of this Policy.
               Any breaches, either material or systematic, should be reported to
@@ -482,7 +482,7 @@ class AML extends React.Component {
               FlashXchanger OZTG OÜ products
             </span>
             <span>and/or services for financial crime.</span>
-            <h3 class="heading">Customer risk</h3>
+            <h3 className="heading">Customer risk</h3>
             <span>Customer status can be as follows:</span>
             <span>- Politically Exposed Person (PEP)</span>
             <span>- Service Intermediary</span>
@@ -531,7 +531,7 @@ class AML extends React.Component {
               As a result, all countries or geographic regions or jurisdictions
               are divided into low risk, medium risk and high risk groups.
             </span>
-            <h3 class="heading">
+            <h3 className="heading">
               Low risk countries or geographic areas or jurisdictions
             </h3>
             <span>
@@ -560,7 +560,7 @@ class AML extends React.Component {
             <span>
               Singapore, Switzerland, South Africa, United States of America.
             </span>
-            <h3 class="heading">
+            <h3 className="heading">
               Medium Risk Countries or Geographic Areas or Jurisdictions
             </h3>
             <span>
@@ -588,7 +588,7 @@ class AML extends React.Component {
             <span>
               mitteresidendi-eesti-tulu-maksustamine/nimekiri-territooriumidest
             </span>
-            <h3 class="heading">
+            <h3 className="heading">
               High risk countries or geographic areas or jurisdictions
             </h3>
             <span>
@@ -600,7 +600,7 @@ class AML extends React.Component {
               overview of the sanctions launched by the European Union can be
               obtained at: https://www.sanctionsmap.eu/#/main.
             </span>
-            <h3 class="heading">Risk due to customer communication</h3>
+            <h3 className="heading">Risk due to customer communication</h3>
             <span>
               The risk arising from the communication channel with customers is
               due to the fact that communication with the customer takes place
@@ -611,7 +611,7 @@ class AML extends React.Component {
               terrorist
             </span>
             <span>financing right now.</span>
-            <h3 class="heading">
+            <h3 className="heading">
               Risk levels depending on the communication channel
             </h3>
             <span>
@@ -668,28 +668,28 @@ class AML extends React.Component {
             </span>
             <span>conditions are met:</span>
             <span>
-              <span class="custom_color">a</span> a written durability agreement
+              <span className="custom_color">a</span> a written durability agreement
               has been concluded with the customer;
             </span>
             <span>
-              <span class="custom_color">b</span> no doubts arose in creating a
+              <span className="custom_color">b</span> no doubts arose in creating a
               customer relationship when performing diligence;
             </span>
             <span>
-              <span class="custom_color">c</span> when making a transaction, it
+              <span className="custom_color">c</span> when making a transaction, it
               can be verified that it is the same person;
             </span>
             <span>
-              <span class="custom_color">d</span> transactions are normal and
+              <span className="custom_color">d</span> transactions are normal and
               economically justified;
             </span>
             <span>
-              <span class="custom_color">e</span> if the total value of incoming
+              <span className="custom_color">e</span> if the total value of incoming
               or outgoing payments in a business-to-business relationship
               between a customer and FlashXchanger OZTG OÜ
             </span>
             <span>does not exceed EUR 3 000 per year.</span>
-            <h3 class="heading">Customer due diligence</h3>
+            <h3 className="heading">Customer due diligence</h3>
             <span>
               FlashXchanger OZTG OÜ (including its responsible external service
               providers) requests and obtains the following documents and
@@ -719,7 +719,7 @@ class AML extends React.Component {
             <span>
               - details of the telecommunications of the legal person.
             </span>
-            <h3 class="heading">
+            <h3 className="heading">
               In order to verify the above mentioned information FlashXchanger
               OZTG OÜ will require submitting the following
             </h3>
@@ -743,7 +743,7 @@ class AML extends React.Component {
               - driving licence that meets the requirements provided for in
               subsection 1 of &sect; 4 of the Identity Documents Act of Estonia.
             </span>
-            <h3 class="heading">
+            <h3 className="heading">
               An employee of FlashXchanger OZTG OÜ is prohibited from performing
               a transaction and concluding a contract:
             </h3>
@@ -1139,7 +1139,7 @@ class AML extends React.Component {
             <span>
               may use services and/or products of FlashXchanger OZTG OÜ.
             </span>
-            <h3 class="heading">Monitoring customer activity</h3>
+            <h3 className="heading">Monitoring customer activity</h3>
             <span>
               FlashXchanger OZTG OÜ conducts ongoing monitoring of customer
               activity in order to:
@@ -1182,7 +1182,7 @@ class AML extends React.Component {
               relation to relevant
             </span>
             <span>lists of named terrorist and sanctioned entities.</span>
-            <h3 class="heading">Systems</h3>
+            <h3 className="heading">Systems</h3>
             <span>
               FlashXchanger OZTG OÜ will develop and implement internal IT
               systems and software to comply with this Policy.
@@ -1193,7 +1193,7 @@ class AML extends React.Component {
               applicable laws
             </span>
             <span>and regulations.</span>
-            <h3 class="heading">
+            <h3 className="heading">
               Anti-Money laundering (AML) Policy ans Principles:
             </h3>
             <span>
@@ -1223,7 +1223,7 @@ class AML extends React.Component {
               periods;
             </span>
             <span>- training and awareness for all relevant employees.</span>
-            <h3 class="heading">Sanctions policy:</h3>
+            <h3 className="heading">Sanctions policy:</h3>
             <span>
               FlashXchanger OZTG OÜ is prohibited from transacting with
               individuals, companies and countries that are on prescribed
@@ -1264,7 +1264,7 @@ class AML extends React.Component {
               measures shall be
             </span>
             <span>taken.</span>
-            <h3 class="heading">Anti-Money laundering responsible person</h3>
+            <h3 className="heading">Anti-Money laundering responsible person</h3>
             <span>
               The management board of FlashXchanger OZTG OÜ appoint the
               Anti-Money Laundering Responsible Person who is CEO of
@@ -1274,7 +1274,7 @@ class AML extends React.Component {
               the responsibility to ensure that FlashXchanger OZTG OÜ complies
               with the legal requirements.
             </span>
-            <h3 class="heading">Training and awareness</h3>
+            <h3 className="heading">Training and awareness</h3>
             <span>
               FlashXchanger OZTG OÜ requires that all employees are familiar
               with this Policy and possess adequate awareness.
@@ -1284,7 +1284,7 @@ class AML extends React.Component {
               e-learning courses targeted towards the employees not less than
               once per year.
             </span>
-            <h3 class="heading">Data retention</h3>
+            <h3 className="heading">Data retention</h3>
             <span>
               FlashXchanger OZTG OÜ will retain documents related to
               identification information which serve the basis for
@@ -1299,7 +1299,7 @@ class AML extends React.Component {
               information as per AML laws and regulations no less than five
               years after termination of the business relationship.
             </span>
-            <h3 class="heading">Changes to this policy</h3>
+            <h3 className="heading">Changes to this policy</h3>
             <span>
               This Policy shall be reviewed annually or as required by
               applicable laws and regulations.

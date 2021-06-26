@@ -7,8 +7,8 @@ class Cookie extends React.Component {
   render() {
     return (
       <div>
-        <div class="rows">
-          <div class="col s10">
+        <div className="rows">
+          <div className="col s10">
             <div>
               <h1>COOKIE POLICY</h1>
             </div>
@@ -17,7 +17,7 @@ class Cookie extends React.Component {
             <span>
               This Cookie Policy describes how FlashXchanger uses cookies and
               similar technologies on the website{" "}
-              <span class="custom_color">https://flashxchanger.com</span> and
+              <span className="custom_color">https://flashxchanger.com</span> and
             </span>
             <span>
               relevant mobile applications (the &ldquo;Website&rdquo;), what
@@ -48,7 +48,7 @@ class Cookie extends React.Component {
               conditions of processing the User&rsquo;s personal data contained
               in this document.
             </span>
-            <h3 class="heading">About Cookies</h3>
+            <h3 className="heading">About Cookies</h3>
             <span>
               Like many websites we use cookie and other similar technologies
               (&ldquo;cookie&rdquo;). A &ldquo;cookie&rdquo; is a piece of
@@ -74,7 +74,7 @@ class Cookie extends React.Component {
               reject or opt
             </span>
             <span>out of receiving cookies as detailed below.</span>
-            <h3 class="heading">The Cookies On The Website</h3>
+            <h3 className="heading">The Cookies On The Website</h3>
             <span>
               The type of cookies used on the Website can be classified as
               follows:
@@ -102,7 +102,7 @@ class Cookie extends React.Component {
               Please note that because these cookies are strictly necessary to
               deliver the Services to you, you cannot refuse them.
             </span>
-            <h3 class="heading">Analytics Cookies</h3>
+            <h3 className="heading">Analytics Cookies</h3>
             <span>
               Analytics cookies are not personally identifiable cookies. They
               allow users to navigate through the pages and while navigating,
@@ -114,12 +114,12 @@ class Cookie extends React.Component {
               user
             </span>
             <span>experience with us.</span>
-            <h3 class="heading">Security</h3>
+            <h3 className="heading">Security</h3>
             <span>
               Security cookies are used in order to enable security features,
               and to detect any violations of our Terms.
             </span>
-            <h3 class="heading">What are the purposes we use cookies for?</h3>
+            <h3 className="heading">What are the purposes we use cookies for?</h3>
             <span>Based on the above, we use cookies to:</span>
             <span>
               - allow users navigate through pages and use our Services;
@@ -127,7 +127,7 @@ class Cookie extends React.Component {
             <span>- remember user&rsquo;s preferences;</span>
             <span>- enable security features;</span>
             <span>- improve the Website and user experience.</span>
-            <h3 class="heading">How can i control cookies?</h3>
+            <h3 className="heading">How can i control cookies?</h3>
             <span>
               If you wish to delete any cookies that are placed on your
               computer, you may refer to the help and support section in your
@@ -144,7 +144,7 @@ class Cookie extends React.Component {
             </span>
             <span>
               For more information about cookies and how you can opt out, you
-              can visit: <span class="custom_color">www.AboutCookies.org </span>
+              can visit: <span className="custom_color">www.AboutCookies.org </span>
             </span>
             <span>
               By deleting, rejecting or opting out of receiving future cookies,
@@ -152,12 +152,12 @@ class Cookie extends React.Component {
               access certain
             </span>
             <span>areas of the Website.</span>
-            <h3 class="heading">How long does a cookie stay on your device?</h3>
+            <h3 className="heading">How long does a cookie stay on your device?</h3>
             <span>
               The length of time a cookie will stay on your computer depends on
               whether such cookie is a session or permanent cookie.
             </span>
-            <h3 class="heading">Session cookie</h3>
+            <h3 className="heading">Session cookie</h3>
             <span>
               Session cookie is usually stored as a session ID during the
               user&rsquo;s browsing session and is not personally identifiable.
@@ -177,7 +177,7 @@ class Cookie extends React.Component {
               session has been inactive for a specified length of time, usually
               20 minutes.
             </span>
-            <h3 class="heading">Permanent cookie</h3>
+            <h3 className="heading">Permanent cookie</h3>
             <span>
               Unlike session cookie, permanent cookie is stored on the
               user&rsquo;s computer even after the user&rsquo;s browser is
@@ -196,7 +196,7 @@ class Cookie extends React.Component {
               stored for a prolonged period of time, in some cases many years
               into the future.
             </span>
-            <h3 class="heading">Third party cookies</h3>
+            <h3 className="heading">Third party cookies</h3>
             <span>
               Please be aware that some cookies are placed on your computer by
               third parties, other than FlashXchanger. We do not control such
@@ -212,7 +212,7 @@ class Cookie extends React.Component {
               them by visiting their own third party&rsquo;s cookie and privacy
               policies.
             </span>
-            <h3 class="heading">Contact us</h3>
+            <h3 className="heading">Contact us</h3>
             <span>
               If you have any questions, recommendations or want to leave a
               feedback in connection with this Cookie Policy, please contact our
@@ -220,7 +220,7 @@ class Cookie extends React.Component {
             </span>
             <span>
               support or send us your email at{" "}
-              <span class="custom_color">support@flashxchanger.com.</span>
+              <span className="custom_color">support@flashxchanger.com.</span>
             </span>
           </div>
         </div>

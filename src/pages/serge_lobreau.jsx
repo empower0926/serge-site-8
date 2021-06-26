@@ -7,8 +7,8 @@ class Founder extends React.Component {
   render() {
     return (
       <div>
-        <div class="rows">
-          <div class="col s10">
+        <div className="rows">
+          <div className="col s10">
             <div>
               <h1>Serge Maurice Lobreau's long road to success</h1>
             </div>
@@ -24,7 +24,7 @@ class Founder extends React.Component {
               of ambition. A look back at his life and his significant
               experiences.{" "}
             </p>
-            <h3 class="heading">A difficult childhood in Congo</h3>
+            <h3 className="heading">A difficult childhood in Congo</h3>
             <p>
               Serge Maurice Lobreau's life began in the Democratic Republic of
               Congo. He was born in the late 1970s in Mbuji-Mayi. It is a city
@@ -43,7 +43,7 @@ class Founder extends React.Component {
               the Congolese administration authorized the departure for France.
               A new beginning is then possible for the young man.
             </p>
-            <h3 class="heading">A new life in France</h3>
+            <h3 className="heading">A new life in France</h3>
             <p>
               Serge Maurice Lobreau arrived on French territory at the beginning
               of his teenage years. But in just a few months, the teenager
@@ -60,7 +60,7 @@ class Founder extends React.Component {
               resuming his studies in finance until he obtained a master's
               degree in Finance that enabled him to find a job abroad.
             </p>
-            <h3 class="heading">The way to entrepreneurship and success</h3>
+            <h3 className="heading">The way to entrepreneurship and success</h3>
             <p>
               After having acquired solid experience in the world of finance,
               Serge Maurice Lobreau decided to return to his first passion:
