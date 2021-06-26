@@ -35,13 +35,13 @@ setInterval(() => {
       
       console.log(markets[0].ticker.volume);
 
-      if (oztgData.length >= 5) {
+      if (oztgData.length >= 12) {
         oztgData.shift();
       }
-      if (ethData.length >= 5) {
+      if (ethData.length >= 12) {
         ethData.shift();
       }
-      if (btcData.length >= 5) {
+      if (btcData.length >= 12) {
         btcData.shift();
       }
 
@@ -58,24 +58,20 @@ setInterval(() => {
         initcharts();
         onece=false;
       }else{
-        updatecharts();
+        updatecharts(oztgData,ethData,btcData);
       }
-
-   
-
-
-
 
 
     });
 }, 5000);
 
-var chart1;
-var chart2;
-var chart3;
-const label = ["", "", "", "", "", "", "", "", "", "", "", ""],
+let chart1;
+let chart2;
+let chart3;
+let label = ["", "", "", "", "", "", "", "", "", "", "", ""];
 
 function initcharts() {
+  
   const oztgCanvas = document.querySelector("#live_chart_1");
   const btcCanvas = document.querySelector("#live_chart_2");
   const ethCanvas = document.querySelector("#live_chart_3");
@@ -257,23 +253,10 @@ function initcharts() {
 }
 
 
-function updatecharts(data1, data2, data3) {
-  chart1.data.labels.push(label);
-  chart1.data.datasets.forEach((dataset) => {
-    dataset.data.push(data1);
-  });
-
+function updatecharts() {
+  chart1.update();
   chart2.update();
-  chart2.data.labels.push(label);
-  chart2.data.datasets.forEach((dataset) => {
-    dataset.data.push(data2);
-  });
-  chart2.update();
-
-  chart3.data.labels.push(label);
-  chart3.data.datasets.forEach((dataset) => {
-    dataset.data.push(data3);
-  });
   chart3.update();
+
 }
 
