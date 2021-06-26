@@ -878,75 +878,7 @@ class Home extends React.Component {
 
       // Sorta magic numbers based on size of the native UI thumb
       bubble.style.left = `calc(${newVal}% + (${8 - newVal * 0.15}px))`;
-    }
-
-    const coinTags = document.querySelectorAll(".coin-value");
-    const oztgPriceTag = coinTags[0];
-    const btcPriceTag = coinTags[1];
-    const ethPriceTag = coinTags[2];
-
-    const oztgVolumeTag = document.querySelector('#usdt1'); 
-    const btcVolumeTag = document.querySelector('#usdt2'); 
-    const ethVolumeTag = document.querySelector('#usdt3'); 
-
-    const coinsURL =
-      "https://trade.flashxchanger.com/graphql?query={markets{id%20name%20ticker{last%20volume}}}";
-
-    const ethData = [];
-    const oztgData = [];
-    const btcData = [];
-
-    const oztgCanvas = document.querySelector("#live_chart_1");
-    const btcCanvas = document.querySelector("#live_chart_2");
-    const ethCanvas = document.querySelector("#live_chart_3");
-
-    setInterval(() => {
-      fetch(coinsURL)
-        .then((response) => response.json())
-        .then((result) => {
-          const markets = result.data.markets;
-
-          const ethPrice = markets[0].ticker.last;
-          const oztgPrice = markets[1].ticker.last;
-          const btcPrice = markets[2].ticker.last;
-          
-          const ethVolume = markets[0].ticker.volume;
-          const oztgVolume = markets[1].ticker.volume;
-          const btcVolume = markets[2].ticker.volume;
-
-          ethVolumeTag.innerHTML = ethVolume;
-          oztgVolumeTag.innerHTML = oztgVolume;
-          btcVolumeTag.innerHTML = btcVolume;
-          
-          console.log(markets[0].ticker.volume);
-
-          if (oztgData.length >= 5) {
-            oztgData.shift();
-          }
-          if (ethData.length >= 5) {
-            ethData.shift();
-          }
-          if (btcData.length >= 5) {
-            btcData.shift();
-          }
-
-          oztgData.push(oztgPrice);
-          ethData.push(ethPrice);
-          btcData.push(btcPrice);
-
-          oztgPriceTag.innerHTML = `$ ${oztgPrice}`;
-          btcPriceTag.innerHTML = `$ ${btcPrice}`;
-          ethPriceTag.innerHTML = `$ ${ethPrice}`;
-
-
-          // chart work
-          // let oztgCTX = oztgCanvas.getContext("2d");
-          // let ethCTX = ethCanvas.getContext("2d");
-          // let btcCTX = btcCanvas.getContext("2d");
-
-          // let oztgChart = new Chart(oztgCTX, {});
-        });
-    }, 5000);
+    }  
   }
 }
 export default Home;

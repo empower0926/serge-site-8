@@ -1,0 +1,279 @@
+const ethData = [];
+const oztgData = [];
+const btcData = [];
+let onece=true;
+
+
+setInterval(() => {
+  const coinTags = document.querySelectorAll(".coin-value");
+  
+  const coinsURL =
+  "https://trade.flashxchanger.com/graphql?query={markets{id%20name%20ticker{last%20volume}}}";
+    const oztgPriceTag = coinTags[0];
+  const btcPriceTag = coinTags[1];
+  const ethPriceTag = coinTags[2];
+  
+    const oztgVolumeTag = document.querySelector('#usdt1'); 
+  const btcVolumeTag = document.querySelector('#usdt2'); 
+  const ethVolumeTag = document.querySelector('#usdt3'); 
+  fetch(coinsURL)
+    .then((response) => response.json())
+    .then((result) => {
+      const markets = result.data.markets;
+
+      const ethPrice = markets[0].ticker.last;
+      const oztgPrice = markets[1].ticker.last;
+      const btcPrice = markets[2].ticker.last;
+      
+      const ethVolume = markets[0].ticker.volume;
+      const oztgVolume = markets[1].ticker.volume;
+      const btcVolume = markets[2].ticker.volume;
+
+      ethVolumeTag.innerHTML = ethVolume;
+      oztgVolumeTag.innerHTML = oztgVolume;
+      btcVolumeTag.innerHTML = btcVolume;
+      
+      console.log(markets[0].ticker.volume);
+
+      if (oztgData.length >= 5) {
+        oztgData.shift();
+      }
+      if (ethData.length >= 5) {
+        ethData.shift();
+      }
+      if (btcData.length >= 5) {
+        btcData.shift();
+      }
+
+      oztgData.push(oztgPrice);
+      ethData.push(ethPrice);
+      btcData.push(btcPrice);
+     
+      oztgPriceTag.innerHTML = oztgPrice;
+      btcPriceTag.innerHTML = `$ ${btcPrice}`;
+      ethPriceTag.innerHTML = `$ ${ethPrice}`;
+
+
+      if(onece){
+        initcharts();
+        onece=false;
+      }else{
+        updatecharts();
+      }
+
+   
+
+
+
+
+
+    });
+}, 5000);
+
+var chart1;
+var chart2;
+var chart3;
+const label = ["", "", "", "", "", "", "", "", "", "", "", ""],
+
+function initcharts() {
+  const oztgCanvas = document.querySelector("#live_chart_1");
+  const btcCanvas = document.querySelector("#live_chart_2");
+  const ethCanvas = document.querySelector("#live_chart_3");
+  let oztgCTX = oztgCanvas.getContext("2d");
+  let ethCTX = ethCanvas.getContext("2d");
+  let btcCTX = btcCanvas.getContext("2d");
+
+
+  chart1 = new Chart(oztgCTX, {
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: label,
+      // Information about the dataset
+      datasets: [
+        {
+          //label: "Rainfall",
+          backgroundColor: "#ecd9ff",
+          borderColor: "#358A9E",
+
+          data: oztgData,
+
+          fill: false,
+          tension: 0.4,
+          pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+          pointBorderColor: "rgba(0, 0, 0, 0.01)",
+        },
+      ],
+    },
+
+    // Configuration options
+    options: {
+      layout: {
+        padding: 10,
+      },
+      legend: {
+        display: false,
+        position: "bottom",
+      },
+      //title: {
+      //			display: true,
+      //		text: 'Precipitation in Toronto'
+      //},
+      scales: {
+        yAxes: [
+          {
+            scaleLabel: {
+              display: false,
+              labelString: "",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            scaleLabel: {
+              display: false,
+              labelString: "day",
+            },
+          },
+        ],
+      },
+    },
+  });
+
+  chart2 = new Chart(ethCTX, {
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: label,
+      // Information about the dataset
+      datasets: [
+        {
+          //label: "Rainfall",
+          backgroundColor: "#ecd9ff",
+          borderColor: "#358A9E",
+
+          data: ethData,
+
+          fill: false,
+          tension: 0.4,
+          pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+          pointBorderColor: "rgba(0, 0, 0, 0.01)",
+        },
+      ],
+    },
+
+    // Configuration options
+    options: {
+      layout: {
+        padding: 10,
+      },
+      legend: {
+        display: false,
+        position: "bottom",
+      },
+      //title: {
+      //			display: true,
+      //		text: 'Precipitation in Toronto'
+      //},
+      scales: {
+        yAxes: [
+          {
+            scaleLabel: {
+              display: false,
+              labelString: "",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            scaleLabel: {
+              display: false,
+              labelString: "day",
+            },
+          },
+        ],
+      },
+    },
+  });
+
+  chart3 = new Chart(btcCTX, {
+    type: "line",
+
+    // The data for our dataset
+    data: {
+      labels: label,
+      // Information about the dataset
+      datasets: [
+        {
+          backgroundColor: "#ecd9ff",
+          borderColor: "#358A9E",
+
+          data: btcData,
+
+          fill: false,
+          tension: 0.4,
+          pointBackgroundColor: "rgba(0, 0, 0, 0.01)",
+          pointBorderColor: "rgba(0, 0, 0, 0.01)",
+        },
+      ],
+    },
+
+    // Configuration options
+    options: {
+      layout: {
+        padding: 10,
+      },
+      legend: {
+        display: false,
+        position: "bottom",
+      },
+      //title: {
+      //			display: true,
+      //		text: 'Precipitation in Toronto'
+      //},
+      scales: {
+        yAxes: [
+          {
+            scaleLabel: {
+              display: false,
+              labelString: "",
+            },
+          },
+        ],
+        xAxes: [
+          {
+            scaleLabel: {
+              display: false,
+              labelString: "day",
+            },
+          },
+        ],
+      },
+    },
+  });
+
+}
+
+
+function updatecharts(data1, data2, data3) {
+  chart1.data.labels.push(label);
+  chart1.data.datasets.forEach((dataset) => {
+    dataset.data.push(data1);
+  });
+
+  chart2.update();
+  chart2.data.labels.push(label);
+  chart2.data.datasets.forEach((dataset) => {
+    dataset.data.push(data2);
+  });
+  chart2.update();
+
+  chart3.data.labels.push(label);
+  chart3.data.datasets.forEach((dataset) => {
+    dataset.data.push(data3);
+  });
+  chart3.update();
+}
+
