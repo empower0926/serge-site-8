@@ -162,7 +162,7 @@ class Home extends React.Component {
                   </div>
                   <div>
                     <div className="coin-value" id="coin-value1">
-                      $ 0.137
+                      $ 0.000
                     </div>
                   </div>
                   <span className="usdt" id="usdt1">
@@ -192,7 +192,7 @@ class Home extends React.Component {
                   </div>
                   <div>
                     <div className="coin-value" id="coin-value2">
-                      $ 0.137
+                      $ 0.000
                     </div>
                   </div>
                   <span className="usdt" id="usdt2">
@@ -223,7 +223,7 @@ class Home extends React.Component {
                   </div>
                   <div>
                     <div className="coin-value" id="coin-value3">
-                      $ 0.137
+                      $ 0.000
                     </div>
                   </div>
                   <span className="usdt" id="usdt3">
