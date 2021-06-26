@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Cookies from "universal-cookie";
 import Cookie_Accept from "./cookie_accept_panel";
-const Chart = require('chart.js');
 
 const cookies = new Cookies();
 
